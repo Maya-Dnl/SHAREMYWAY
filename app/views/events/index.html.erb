@@ -1,12 +1,9 @@
 <%# <div class="logo?"></div> %>
 
-<h1>All Events</h1>
+<h1 class="text-center">All Events</h1>
 
 <div class="container">
-
-
-<%#  ici la search bar pour rentrer une localisation %>
-
+<%#  si dessous la search bar pour rentrer une localisation %>
   <div class="row justify-content-center">
     <div class="col-sm-8 my-3">
       <%= form_with url: events_path, method: :get, class: "d-flex" do %>
@@ -20,14 +17,11 @@
     </div>
   </div>
 
-
   <div class="card-event">
     <div class="events-list" data-controller="events-list">
-
       <% @events.each do |event| %>
         <div class="card">
-          <%# <%= cl_image_tag( event.image.key, alt: "NA", class: "") %>
-
+          <%= cl_image_tag( event.photo.key, alt: "NA", class: "card-img-top") %>
             <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
             <%# <%= link_to 'More', members_path(event), class: 'btn btn-primary' %>
 
@@ -38,7 +32,6 @@
 
             <%# ligne ci dessous à modifier si nous voulons rediriger directement vers la modal "success you joined this event!" %>
             <%= link_to 'Discover', event_path(event), class: 'btn btn-primary' %>
-
         </div>
       <% end %>
     </div>
