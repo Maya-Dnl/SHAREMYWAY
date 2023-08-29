@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -49,6 +50,12 @@ event1 = Event.create!(
   description: "Come with us for the best holidays of your life",
   user: user2
 )
+
+
+file = URI.open("https://img.freepik.com/photos-gratuite/randonneur-debout-devant-tente-orange-devant-camping-sac-dos-montagne_1150-9163.jpg")
+event1.photo.attach(io: file, filename: "randonné.png", content_type: "image/png")
+event1.save
+
 
 event2 = Event.create!(
   name: "Movies party",
