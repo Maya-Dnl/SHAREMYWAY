@@ -6,6 +6,7 @@ require "open-uri"
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
 puts "cleaning data base"
 Booking.destroy_all
 Event.destroy_all
@@ -51,11 +52,9 @@ event1 = Event.create!(
   user: user2
 )
 
-
 file = URI.open("https://img.freepik.com/photos-gratuite/randonneur-debout-devant-tente-orange-devant-camping-sac-dos-montagne_1150-9163.jpg")
 event1.photo.attach(io: file, filename: "randonné.jpg", content_type: "image/jpg")
 event1.save
-
 
 event2 = Event.create!(
   name: "Movies party",
