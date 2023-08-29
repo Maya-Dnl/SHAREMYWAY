@@ -7,16 +7,15 @@
 #   Character.create(name: "Luke", movie: movies.first)
 puts "cleaning data base"
 Booking.destroy_all
-FlyingSaucer.destroy_all
+Event.destroy_all
 User.destroy_all
 
 puts "starting seed"
-
+# ["music", "trip", "fashion", "mathematics", "coffee", "movies"]
 user1 = User.create!(
-  email: "user10@example.com",
-  password: "pass10",
-  password_confirmation: "pass10",
-  username: "example_user10",
+  email: "beatrice-routine@icloud.com",
+  password: "123456",
+  username: "Bea Routine",
   language: "French",
   hobby1: "coffee",
   hobby2: "music",
@@ -24,10 +23,9 @@ user1 = User.create!(
 )
 
 user2 = User.create!(
-  email: "user10@example.com",
-  password: "pass10",
-  password_confirmation: "pass10",
-  username: "example_user10",
+  email: "steven-richard@outlook.com",
+  password: "123456",
+  username: "Steven Richar44",
   language: "French",
   hobby1: "music",
   hobby2: "trip",
@@ -35,53 +33,52 @@ user2 = User.create!(
 )
 
 user3 = User.create!(
-  email: "user10@example.com",
-  password: "pass10",
-  password_confirmation: "pass10",
-  username: "example_user10",
+  email: "john.marchand@gmail.com",
+  password: "123456",
+  username: "John Marchand",
   language: "French",
   hobby1: "trip",
   hobby2: "music",
-  hobby3: "mathematics"
+  hobby3: ""
 )
 
 event1 = Event.create!(
-  name: "the great trip",
-  address: "the saint michel mont",
+  name: "The great trip",
+  address: "The saint michel mont",
   date: "02/09/2024",
-  description: "come with us for the best holidays of your life",
+  description: "Come with us for the best holidays of your life",
   user: user2
 )
 
 event2 = Event.create!(
-  name: "movies party",
+  name: "Movies party",
   address: "09 avenue de la poule noire, Nantes",
   date: "02/09/2023",
-  description: "come with us for the best movies party of your life",
+  description: "Come with us for the best movies party of your life",
   user: user3
 )
 
 event3 = Event.create!(
-  name: "look fashion style",
+  name: "Look fashion style",
   address: "04 rue des beaux styles, strasbourg",
   date: "02/08/2023",
-  description: "fashion style is in your bear",
+  description: "Fashion style is in your bear",
   user: user1
 )
 
 event4 = Event.create!(
-  name: "mathematic with us",
+  name: "Mathematic with us",
   address: "1 rue des mathematicien",
   date: "02/11/2023",
-  description: "with us become more stronger in mathematics",
+  description: "With us become more stronger in mathematics",
   user: user2
 )
 
 event5 = Event.create!(
-  name: "dance witch us for all night",
+  name: "Dance witch us for all night",
   address: "7 rue des danseur, paris",
   date: "24/11/2023",
-  description: "danse all night and discover paris-night life",
+  description: "Danse all night and discover paris-night life",
   user: user3
 )
 

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  HOBBYS = ["music", "trip", "fashion", "mathematics", "coffee", "movies"]
+  HOBBYS = ["music", "trip", "fashion", "mathematics", "coffee", "movies", ""]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
