@@ -1,0 +1,46 @@
+<%# <div class="logo?"></div> %>
+
+<h1>All Events</h1>
+
+<div class="container">
+
+
+<%#  ici la search bar pour rentrer une localisation %>
+
+  <div class="row justify-content-center">
+    <div class="col-sm-8 my-3">
+      <%= form_with url: events_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Event location"
+          %>
+        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+
+
+  <div class="card-event">
+    <div class="events-list" data-controller="events-list">
+
+      <% @events.each do |event| %>
+        <div class="card">
+          <%# <%= cl_image_tag( event.image.key, alt: "NA", class: "") %>
+
+            <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
+            <%# <%= link_to 'More', members_path(event), class: 'btn btn-primary' %>
+
+            <p class="display-date"><%= event.date %></p>
+            <h2 class="card-title"><%= event.name %></h2>
+            <p class="location"><%= event.address %></p>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+
+            <%# ligne ci dessous à modifier si nous voulons rediriger directement vers la modal "success you joined this event!" %>
+            <%= link_to 'Discover', event_path(event), class: 'btn btn-primary' %>
+
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
