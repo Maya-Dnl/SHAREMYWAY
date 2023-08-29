@@ -68,29 +68,7 @@ file = File.open("app/assets/images/movie1.jpg")
 event2.photo.attach(io: file, filename: "camping.jpg", content_type: "image/jpg")
 event2.save
 
-event3 = Event.create!(
-  name: "Look fashion style",
-  address: "04 rue des beaux styles, strasbourg",
-  date: "02/08/2023",
-  description: "Fashion style is in your bear",
-  user: user1
-)
 
-event4 = Event.create!(
-  name: "Mathematic with us",
-  address: "1 rue des mathematicien",
-  date: "02/11/2023",
-  description: "With us become more stronger in mathematics",
-  user: user2
-)
-
-event5 = Event.create!(
-  name: "Dance witch us for all night",
-  address: "7 rue des danseur, paris",
-  date: "24/11/2023",
-  description: "Danse all night and discover paris-night life",
-  user: user3
-)
 
 # Create a booking associated with the user
 booking1 = Booking.create!(
