@@ -3,4 +3,10 @@ class Event < ApplicationRecord
 
   has_many :bookings
   has_many :users, through: :bookings
+  has_one_attached :photo
+
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :date, presence: true
+  validates :description, presence: true
 end
