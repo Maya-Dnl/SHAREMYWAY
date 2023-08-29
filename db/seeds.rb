@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -10,6 +11,7 @@ puts "cleaning data base"
 Booking.destroy_all
 Event.destroy_all
 User.destroy_all
+
 puts "starting seed"
 # ["music", "trip", "fashion", "mathematics", "coffee", "movies"]
 user1 = User.create!(
@@ -21,6 +23,7 @@ user1 = User.create!(
   hobby2: "music",
   hobby3: "movies"
 )
+
 user2 = User.create!(
   email: "steven-richard@outlook.com",
   password: "123456",
@@ -30,6 +33,7 @@ user2 = User.create!(
   hobby2: "trip",
   hobby3: "fashion"
 )
+
 user3 = User.create!(
   email: "john.marchand@gmail.com",
   password: "123456",
@@ -39,6 +43,7 @@ user3 = User.create!(
   hobby2: "music",
   hobby3: ""
 )
+
 event1 = Event.create!(
   name: "The great trip",
   address: "The saint michel mont",
@@ -46,6 +51,11 @@ event1 = Event.create!(
   description: "Come with us for the best holidays of your life",
   user: user2
 )
+
+file = URI.open("https://img.freepik.com/photos-gratuite/randonneur-debout-devant-tente-orange-devant-camping-sac-dos-montagne_1150-9163.jpg")
+event1.photo.attach(io: file, filename: "randonné.jpg", content_type: "image/jpg")
+event1.save
+
 event2 = Event.create!(
   name: "Movies party",
   address: "09 avenue de la poule noire, Nantes",
@@ -53,6 +63,11 @@ event2 = Event.create!(
   description: "Come with us for the best movies party of your life",
   user: user3
 )
+
+file = File.open("app/assets/images/movie1.jpg")
+event2.photo.attach(io: file, filename: "camping.jpg", content_type: "image/jpg")
+event2.save
+
 event3 = Event.create!(
   name: "Look fashion style",
   address: "04 rue des beaux styles, strasbourg",
@@ -60,6 +75,7 @@ event3 = Event.create!(
   description: "Fashion style is in your bear",
   user: user1
 )
+
 event4 = Event.create!(
   name: "Mathematic with us",
   address: "1 rue des mathematicien",
@@ -67,6 +83,7 @@ event4 = Event.create!(
   description: "With us become more stronger in mathematics",
   user: user2
 )
+
 event5 = Event.create!(
   name: "Dance witch us for all night",
   address: "7 rue des danseur, paris",
@@ -74,6 +91,7 @@ event5 = Event.create!(
   description: "Danse all night and discover paris-night life",
   user: user3
 )
+
 # Create a booking associated with the user
 booking1 = Booking.create!(
   user: user2,
