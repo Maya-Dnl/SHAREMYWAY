@@ -53,7 +53,7 @@ event1 = Event.create!(
 
 
 file = URI.open("https://img.freepik.com/photos-gratuite/randonneur-debout-devant-tente-orange-devant-camping-sac-dos-montagne_1150-9163.jpg")
-event1.photo.attach(io: file, filename: "randonné.png", content_type: "image/png")
+event1.photo.attach(io: file, filename: "randonné.jpg", content_type: "image/jpg")
 event1.save
 
 
@@ -64,6 +64,10 @@ event2 = Event.create!(
   description: "Come with us for the best movies party of your life",
   user: user3
 )
+
+file = File.open("app/assets/images/movie1.jpg")
+event2.photo.attach(io: file, filename: "camping.jpg", content_type: "image/jpg")
+event2.save
 
 event3 = Event.create!(
   name: "Look fashion style",
