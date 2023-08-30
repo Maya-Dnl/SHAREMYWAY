@@ -1,7 +1,17 @@
 class EventsController < ApplicationController
 
+  # def index
+  #   @events = Event.all
+  #   if params[:query].present?
+  #     @events = @events.where(address: params[:query])
+  #   end
+  # end
+
   def index
     @events = Event.all
+    if params[:query].present?
+      @events = @events.where('address ILIKE ?', "%#{params[:query]}%")
+    end
   end
 
   # def new
