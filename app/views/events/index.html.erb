@@ -1,10 +1,10 @@
 <%# <div class="logo?"></div> %>
 
-<h1 class="title-all-events">All Events</h1>
+<h1 class="title-all-events">ShareMyWay</h1>
 
 <div class="container event-index">
 <%#  si dessous la search bar pour rentrer une localisation %>
-  <div class="search-bar">
+  <div class="searchbar">
     <div>
       <%= form_with url: events_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,

@@ -11,9 +11,10 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-
     <%= yield %>
+    <% unless ["devise/registration", "devise/session", "devise/password", "pages"].include?(params[:controller]) || devise_controller? %>
+      <%= render "shared/navbar" %>
+    <% end %>
   </body>
 </html>
