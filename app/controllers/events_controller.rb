@@ -1,11 +1,6 @@
 class EventsController < ApplicationController
 
-  # def index
-  #   @events = Event.all
-  #   if params[:query].present?
-  #     @events = @events.where(address: params[:query])
-  #   end
-  # end
+  before_action :set_event, only: [:show]
 
   def index
     @events = Event.all
@@ -28,8 +23,8 @@ class EventsController < ApplicationController
   #   end
   # end
 
-  # def show
-  # end
+  def show
+  end
 
   # def edit
   # end
@@ -40,14 +35,14 @@ class EventsController < ApplicationController
   # def destroy
   # end
 
-  # private
+  private
 
-  # def set_event
-  #   @event = Event.find(params[:id])
-  # end
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-  # def event_params
-  #   params.require(:event).permit(:name, :description, :address, :date, :image)
-  # end
+  def event_params
+    params.require(:event).permit(:name, :description, :address, :date, :image)
+  end
 
 end
