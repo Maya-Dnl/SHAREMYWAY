@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  # get "profil", to: "devise/registrations#edit"
 
   resources :events do
     resources :bookings, only: %i[create]
