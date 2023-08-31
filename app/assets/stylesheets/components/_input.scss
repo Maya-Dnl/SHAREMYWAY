@@ -46,6 +46,7 @@
 .button-my-profil {
   border-radius: 15px;
   background: #FFC436;
+  margin-bottom: 25px;
 }
 .form-actions {
   text-align: center;
@@ -57,4 +58,27 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
+}
+
+#left {
+  align-items: start !important;
+}
+
+
+.align-element {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+
+
+.bouton-modified {
+  border-radius : 50%;
+  background-color: rgba(170, 170, 170, 0.644);
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
 }
