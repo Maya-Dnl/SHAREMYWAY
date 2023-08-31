@@ -1,0 +1,60 @@
+// .input-photo{
+//   width: 168px;
+//   height: 168px;
+//   border-radius: 50%;
+//   margin: auto;
+//   background-color: #89807A66;
+//   transform: scale(0)
+// }
+
+.file-container {
+  position: relative;
+  height: 185px;
+  display: flex;
+  justify-content: center;
+}
+
+.input-photo {
+  transform: scale(0);
+}
+
+.file-label {
+  display: inline-block;
+  width: 168px;
+  height: 168px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
+.tag-classic-input1 {
+  font-family: 'arial';
+  border-radius: 8px;
+  border: 2px solid #C4C4C4;
+  background-color: white;
+}
+
+.tag-classic-input {
+  font-family: 'arial';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.button-my-profil {
+  border-radius: 15px;
+  background: #FFC436;
+}
+.form-actions {
+  text-align: center;
+}
+
+.center-text {
+  color: #8C3333;
+  font-family: roboto, Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+}

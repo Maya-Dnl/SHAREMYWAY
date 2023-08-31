@@ -1,13 +1,15 @@
 <div class="container">
-<h2>Profil <%= resource.username %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-  <%# <div class="d-none"> %>
-   <%= f.input :email, required: true, autofocus: true %>
-  <%# </div> %>
+  <div class="tag-classic-input">
+    <div class="form-inputs">
+    <%# <div class="d-none"> %>
+    <%= f.input :email, required: true, autofocus: true,
+                  input_html: { class: "tag-classic-input1" } %>
+    <%# </div> %>
+  </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
@@ -21,13 +23,29 @@
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
   </div>
+  <div class="tag-classic-input">
     <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
+                input_html: { class: "tag-classic-input1" },
+                hint: "We need your current password to confirm your changes, please",
                 required: true,
                 autocomplete: :current_password  %>
-    <%= f.input :photo, as: :file %>
-    <%= f.input :username %>
-    <%= f.input :language, collection: (["French", "English"]) %>
+  </div>
+    <div class="file-container">
+      <%= f.input :photo, as: :file,
+                input_html: { class: "input-photo", id: "input-photo" },
+                label: false %>
+                <label for="input-photo" class="file-label"></label>
+    </div>
+    <div class="tag-classic-input">
+      <%= f.input :username,
+                input_html: { class: "tag-classic-input1" } %>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :language, collection: (["French", "English"]),
+                input_html: { class: "tag-classic-input1" } %>
+    </div>
+
     <%= f.input :hobby1, as: :radio_buttons,
                 input_html: { class: "tag-selector" },
                 item_wrapper_class: 'tag-item',
@@ -42,9 +60,12 @@
                 collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", " "]) %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div class="button-my-profil">
+    <div class="form-actions">
+      <%= f.button :submit, "Save profile", class: "center-text" %>
+    </div>
   </div>
+
 <% end %>
 
 <div class="d-none">
