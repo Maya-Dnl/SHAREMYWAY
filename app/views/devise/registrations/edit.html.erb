@@ -1,14 +1,19 @@
-<div class="container">
+<div class="align-element">
+  <h1 class="logo" id="left">ShareMyWay</h1>
+  <%= link_to "X", events_path, class:"bouton-modified" %>
+</div>
 
+
+<div class="container">
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
   <div class="tag-classic-input">
     <div class="form-inputs">
-    <%# <div class="d-none"> %>
+    <div class="d-none">
     <%= f.input :email, required: true, autofocus: true,
                   input_html: { class: "tag-classic-input1" } %>
-    <%# </div> %>
+    </div>
   </div>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -49,15 +54,15 @@
     <%= f.input :hobby1, as: :radio_buttons,
                 input_html: { class: "tag-selector" },
                 item_wrapper_class: 'tag-item',
-                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", " "]) %>
+                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness"]) %>
     <%= f.input :hobby2, as: :radio_buttons,
                 input_html: { class: "tag-selector" },
                 item_wrapper_class: 'tag-item',
-                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", " "]) %>
+                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness"]) %>
     <%= f.input :hobby3, as: :radio_buttons,
                 input_html: { class: "tag-selector" },
                 item_wrapper_class: 'tag-item',
-                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", " "]) %>
+                collection: (["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", ""]) %>
   </div>
 
   <div class="button-my-profil">
@@ -73,9 +78,6 @@
 
 <div>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete %></div>
 </div>
-
-
-<%= link_to "Back", :back %>
 
 </div>
 
