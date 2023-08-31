@@ -1,30 +1,37 @@
 <%# <h1 class="title-all-events">All Events</h1> %>
-
-<div class="container show-event">
-  <%# <button class="back"></button> %>
-  <%= link_to "Back", events_path, class: "btn btn-primary" %>
   <%# <button class="members"></button> %>
   <%# <%= link_to "Members", members_path, class: "btn btn-primary" %>
   <%# <button class="event-maps"></button> %>
   <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
+  <%# <button class="back"></button> %>
 
+<div class="image-event-show"><%= cl_image_tag( @event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
+<div class="container show-event">
+  <button class="btn-back-all-events">
+    <%= link_to "<", events_path %>
+  </button>
 
-  <div class="image-event"><%= cl_image_tag( @event.photo.key, alt: "NA", class: "card-img-top") %></div>
   <div class="icon-event-categories">
-    <i class="fa-solid fa-campground"></i>
+    <i class="fa-solid fa-campground category"></i>
   </div>
-  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
 
-  <h1 class="event-title"><%= @event.name %></h1>
+  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-show-event" />
 
-  <div class="infos">
-    <div class="icon-location"></div>
-    <div class="location"><%= @event.address %></div>
-    <div class="icon-date"></div>
-    <div class="date"><%= @event.date %></div>
-    <div class="icon-members"></div>
+  <div class="show-infos">
+    <h1 class="event-title spacy"><%= @event.name %></h1>
+    <div class="location-wrapper d-flex align-items-center spacy">
+      <i class="fa-solid fa-location-pin icon-info where-show"></i>
+      <div class="location size"><%= @event.address %></div>
+    </div>
+    <div class="date-wrapper d-flex align-items-center">
+      <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
+      <div class="display-date size"><%= @event.date %></div>
+    </div>
+    <%# <div class="icon-members"></div> %>
     <%# <div class="members">+ 5 going</div> %>
+    <div class="description">
+      <p class="infos-description">Description</p>
+        <p class="text-description"> "<%= @event.description %>"</p>
+    </div>
   </div>
-
-  <div class="event-description"><%= @event.description %></div>
 </div>
