@@ -1,1 +1,60 @@
 // Specific CSS for your home-page
+.quote {
+  /* Quote styles */
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  background-color: your-quote-background-color;
+  color: #FFF;
+  // text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Montserrat;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: your-quote-border-radius;
+  // position: absolute;
+  margin-top: 50px;
+}
+
+.quote-heading {
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  gap: 10px;
+}
+
+.quote-content {
+  font-size: 56px; /* Adjust font size of the quote symbol */
+}
+
+// _app-name.scss
+
+.app-name {
+  width: 321px;
+  height: 88px;
+  color: var(--white, #FFF);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Bukhari Script;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-shrink: 0;
+  margin-top: 180px;
+}
+
+.bg-image {
+background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), asset-url("homepage-background.jpg") lightgray 50% / cover no-repeat;
+background-size: cover;
+height: 100vh;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
