@@ -1,0 +1,78 @@
+.image {
+  border-radius: 16px 16px 0px 0px;
+  height: 125px;
+  object-fit: cover;
+}
+
+.event-infos {
+  position: relative;
+  .event-title {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 7px 5px 5px 7px;
+    padding: 5px;
+  }
+  .location {
+    color: $kakhi;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 4px;
+  }
+  .display-date {
+    color: $yellow;
+    font-family: Montserrat;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 66px;
+}
+
+.card-event {
+  border-radius: 16px;
+  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+  overflow: hidden;
+  background: #FFF;
+  text-decoration: none;
+
+
+  .icon-info {
+    margin-left: 6px;
+    margin-right: 5px;
+    padding-left: 4px;
+    padding-bottom: 4px;
+    font-size: 10px;
+  }
+  .where {
+    color: $kakhi;
+  }
+  .when {
+    color: $yellow;
+    margin-bottom: 4px;
+  }
+}
+
+.icone-categories {
+  color: $burgundy;
+  font-size: 25px;
+  position: absolute;
+  top: +25px;
+  right: 20px;
+  padding-right: 5px;
+}
