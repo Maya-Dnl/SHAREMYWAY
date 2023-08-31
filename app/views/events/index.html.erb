@@ -1,6 +1,6 @@
 <%# <div class="logo?"></div> %>
 
-<h1 class="title-all-events">ShareMyWay</h1>
+<h1 class="logo">ShareMyWay</h1>
 
 <div class="container event-index">
 <%#  si dessous la search bar pour rentrer une localisation %>
@@ -31,15 +31,15 @@
                   <i class="fa-solid fa-location-pin icon-info where"></i>
                   <div class="location"><%= event.address %></div>
                 </div>
-                <div class="date-wrapper d-flex">
-                  <i class="fa-solid fa-location-pin icon-info when"></i>
+                <div class="date-wrapper d-flex align-items-center">
+                  <i class="fa-regular fa-calendar icon-info when"></i>
                   <div class="display-date"><%= event.date %></div>
                 </div>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+                <div class="icone-categories">
+                  <i class="fa-solid fa-campground"></i>
+                </div>
               </div>
-              <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-
-              <%# ligne ci dessous à modifier si nous voulons rediriger directement vers la modal "success you joined this event!" %>
-
           </div>
         <% end %>
       <% end %>
