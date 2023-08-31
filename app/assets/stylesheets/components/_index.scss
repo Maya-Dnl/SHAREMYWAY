@@ -4,22 +4,7 @@
 @import "form_legend_clear";
 @import "navbar";
 @import "button";
-
-h1{
-  text-align: center;
-}
-
-.one-event{
-  display: flex;
-  align-items: center;
-}
-
-.name-and-location{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}
-
-.event-title{
-  font-weight: bold;
-}
+@import "input";
+@import "card_event";
+@import "searchbar";
+@import "logo";
