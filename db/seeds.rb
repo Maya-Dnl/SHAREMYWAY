@@ -58,7 +58,7 @@ user3.save
 
 event1 = Event.create!(
   name: "The great trip",
-  address: "3 rue The saint michel mont",
+  address: "Mont-Saint-Michel",
   date: "02/09/2024",
   description: "Come with us for the best holidays of your life",
   user: user2
@@ -72,7 +72,7 @@ event1.save
 
 event2 = Event.create!(
   name: "Movies party",
-  address: "09 avenue de la poule noire, Nantes",
+  address: "Nantes",
   date: "02/09/2023",
   description: "Come with us for the best movies party of your life",
   user: user3
@@ -84,7 +84,7 @@ event2.save
 
 event3 = Event.create!(
   name: "Sport in football arena",
-  address: "6 rue parc des princes",
+  address: "Paris",
   date: "02/08/2023",
   description: "Come with us for look paris saint germain vs manchester united",
   user: user1
@@ -96,7 +96,7 @@ event3.save
 
 event4 = Event.create!(
   name: "Learn Food and Gastronomy",
-  address: "1 rue des gastronome",
+  address: "Toulouse",
   date: "02/11/2023",
   description: "Learn the good food with us !",
   user: user2
@@ -108,7 +108,7 @@ event4.save
 
 event5 = Event.create!(
   name: "Science all night",
-  address: "7 rue des scientifiques, paris",
+  address: "Bordeaux",
   date: "24/11/2023",
   description: "Learn atome and physical rules with us",
   user: user3

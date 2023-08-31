@@ -1,0 +1,30 @@
+<%# <h1 class="title-all-events">All Events</h1> %>
+
+<div class="container show-event">
+  <%# <button class="back"></button> %>
+  <%= link_to "Back", events_path, class: "btn btn-primary" %>
+  <%# <button class="members"></button> %>
+  <%# <%= link_to "Members", members_path, class: "btn btn-primary" %>
+  <%# <button class="event-maps"></button> %>
+  <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
+
+
+  <div class="image-event"><%= cl_image_tag( @event.photo.key, alt: "NA", class: "card-img-top") %></div>
+  <div class="icon-event-categories">
+    <i class="fa-solid fa-campground"></i>
+  </div>
+  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+
+  <h1 class="event-title"><%= @event.name %></h1>
+
+  <div class="infos">
+    <div class="icon-location"></div>
+    <div class="location"><%= @event.address %></div>
+    <div class="icon-date"></div>
+    <div class="date"><%= @event.date %></div>
+    <div class="icon-members"></div>
+    <div class="members">+ 5 going</div>
+  </div>
+
+  <div class="event-description"><%= @event.description %></div>
+</div>
