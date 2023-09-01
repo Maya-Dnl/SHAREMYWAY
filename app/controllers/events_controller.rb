@@ -9,19 +9,19 @@ class EventsController < ApplicationController
     end
   end
 
-  # def new
-  #   @event = Event.new
-  # end
+  def new
+    @event = Event.new
+  end
 
-  # def create
-  #   @event = Event.new(event_params)
-  #   @event.user = current_user
-  #   if @event.save!
-  #     redirect_to @event, notice: 'Event was successfully created.'
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @event = Event.new(event_params)
+    @event.user = current_user
+    if @event.save!
+      redirect_to @event, notice: 'Event was successfully created.'
+    else
+      render :new
+    end
+  end
 
   def show
   end
@@ -42,7 +42,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :description, :address, :date, :image)
+    params.require(:event).permit(:name, :description, :address, :category, :date, :image)
   end
 
 end

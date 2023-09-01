@@ -1,0 +1,39 @@
+<div class="container show-event">
+  <h1 class="logo-left">ShareMyWay</h1>
+
+  <h1 class="title">New Event</h1>
+  <%= simple_form_for @event do |f| %>
+    <div class="file-container">
+      <%= f.input :image, as: :file,
+      input_html: { class: "input-photo", id: "input-photo" },
+      label: false %> <label for="input-photo" class="file-label-event"></label>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :name, input_html: { class: "tag-classic-input1" } %>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" } %>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :address, input_html: { class: "tag-classic-input1" } %>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :category,
+      as: :select, collection: ["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness", "Sports"], input_html: { class: "tag-classic-input1" } %>
+    </div>
+
+    <div class="tag-classic-input">
+      <%= f.input :date, input_html: { class: "tag-classic-input1"  } %>
+    </div>
+
+    <div class="button-my-profil">
+		  <div class="form-actions">
+        <%= f.button :submit, "Create event", class: "center-text" %>
+		  </div>
+    </div>
+  <% end %>
+</div>
