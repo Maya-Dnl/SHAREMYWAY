@@ -1,6 +1,4 @@
 <%# <h1 class="title-all-events">All Events</h1> %>
-  <%# <button class="members"></button> %>
-  <%# <%= link_to "Members", members_path, class: "btn btn-primary" %>
   <%# <button class="event-maps"></button> %>
   <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
   <%# <button class="back"></button> %>
@@ -10,6 +8,10 @@
   <button class="btn-back-all-events">
     <%= link_to "<", events_path %>
   </button>
+
+    <%= button_to event_bookings_path(@event), data: { turbo_method: :post }, class: "join-event-button" do %>
+      <i class="fa-solid fa-user-plus"></i>
+    <% end %>
 
   <div class="icon-event-categories">
     <i class="fa-solid fa-campground category"></i>
@@ -35,3 +37,9 @@
     </div>
   </div>
 </div>
+
+<% if flash[:notice].present? %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
