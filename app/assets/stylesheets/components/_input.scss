@@ -64,6 +64,14 @@
   align-items: start !important;
 }
 
+.arial-police {
+  font-family: roboto, Arial;
+  font-size: 15px;;
+  color: #8C3333;
+  text-align: center;
+  font-weight: 600;
+}
+
 
 .align-element {
   display: flex;
@@ -81,4 +89,40 @@
   font-size: 20px;
   width: 30px;
   text-align: center;
+}
+
+.custom-radio-input {
+  display: none;
+}
+/* Style de l'image qui remplacera le bouton radio */
+.custom-radio-img {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+  display: inline-block;
+}
+/* Indiquez visuellement quand un bouton est sélectionné */
+.custom-radio-input:checked + .custom-radio-img {
+  border: 2px solid blue;
+}
+
+.radio-buttons-group {
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 15px;
+  display: grid;
+  grid: repeat(2, 83px)/auto-flow 91px;
+}
+
+.custom-radio-label{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+}
+
+h4 {
+  margin-bottom: 35px;
+  margin-top: 25px;
 }
