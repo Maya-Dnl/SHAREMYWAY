@@ -53,37 +53,43 @@
 
     <h4 class="center-text">Select yours favorites hobbys:</h4>
 
-    <h5 class="arial-police">My firts hobby:</h5>
+    <h5>My firts hobby:</h5>
 
     <div class="radio-buttons-group">
        <%= f.collection_radio_buttons :hobby1, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do  %>
             <%= b.radio_button(class: 'custom-radio-input') %>
-              <span class="custom-radio-img" style="background-image: url('<%= asset_path("#{b.object.last.gsub(" ", "-")}.svg") %>');"></span>
-              <span class="custom-radio-text"><%= b.object.first %></span>
-          <% end %>
-        <% end %>
-    </div>
-
-    <h5 class="arial-police">My second hobby:</h5>
-
-    <div class="radio-buttons-group">
-       <%= f.collection_radio_buttons :hobby2, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
-          <%= b.label(class: "custom-radio-label") do %>
-            <%= b.radio_button(class: 'custom-radio-input') %>
-            <span class="custom-radio-img" style="background-image: url('<%= asset_path("#{b.object.last.gsub(" ", "-")}.svg") %>');"></span>
+              <div class="custom-radio-img">
+                <%= image_tag("#{b.object.last.gsub(" ", "-")}.svg", class:"image-size") %>
+              </div>
             <span class="custom-radio-text"><%= b.object.first %></span>
           <% end %>
         <% end %>
     </div>
 
-    <h5 class="arial-police">My third hobby:</h5>
+    <h5>My second hobby:</h5>
+
+    <div class="radio-buttons-group">
+       <%= f.collection_radio_buttons :hobby2, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
+          <%= b.label(class: "custom-radio-label") do %>
+            <%= b.radio_button(class: 'custom-radio-input') %>
+            <div class="custom-radio-img">
+              <%= image_tag("#{b.object.last.gsub(" ", "-")}.svg", class:"image-size") %>
+            </div>
+            <span class="custom-radio-text"><%= b.object.first %></span>
+          <% end %>
+        <% end %>
+    </div>
+
+    <h5>My third hobby:</h5>
 
     <div class="radio-buttons-group">
        <%= f.collection_radio_buttons :hobby3, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do %>
             <%= b.radio_button(class: 'custom-radio-input') %>
-              <span class="custom-radio-img" style="background-image: url('<%= asset_path("#{b.object.last.gsub(" ", "-")}.svg") %>');"></span>
+              <div class="custom-radio-img">
+                <%= image_tag("#{b.object.last.gsub(" ", "-")}.svg", class:"image-size") %>
+              </div>
               <span class="custom-radio-text"><%= b.object.first %></span>
           <% end %>
         <% end %>
