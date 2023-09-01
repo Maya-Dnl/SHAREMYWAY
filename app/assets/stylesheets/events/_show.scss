@@ -13,6 +13,19 @@
   margin: 15px;
 }
 
+.join-event-button {
+  font-size: 20px;
+  position: absolute;
+  background-color: transparent;
+  top: -5px;
+  left: 290px;
+  color: $white;
+  // position: relative;
+  border-radius: 50%;
+  border: none;
+  margin: 15px;
+}
+
 .show-infos{
   margin-top: 50px;
   margin-left: 20px;

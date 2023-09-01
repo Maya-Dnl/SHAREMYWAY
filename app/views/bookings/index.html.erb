@@ -1,0 +1,33 @@
+<h1 class="logo">ShareMyWay</h1>
+
+<h2 class="my-bookings">My Bookings</h2>
+
+<div class="cards content-event">
+    <div class="events-list" data-controller="events-list">
+      <% current_user.bookings.each do |booking| %>
+        <%= link_to events_path do %>
+          <div class="card-event">
+            <%= cl_image_tag( booking.event.photo.key, alt: "NA", class: "card-img-top image")%>
+              <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
+              <%# <%= link_to 'More', members_path(event), class: 'btn btn-primary' %>
+              <div class="event-infos">
+                <div class="event-title"><%= booking.event.name %></div>
+                <div class="location-wrapper d-flex align-items-center">
+                  <i class="fa-solid fa-location-pin icon-info where"></i>
+                  <div class="location"><%= booking.event.address %></div>
+                </div>
+                <div class="date-wrapper d-flex align-items-center">
+                  <i class="fa-regular fa-calendar icon-info when"></i>
+                  <div class="display-date"><%= booking.event.date %></div>
+                </div>
+                <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+                <div class="icone-categories">
+                  <i class="fa-solid fa-campground"></i>
+                </div>
+              </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
