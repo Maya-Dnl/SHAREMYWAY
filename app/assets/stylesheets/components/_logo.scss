@@ -13,3 +13,19 @@
   margin-top: 10px;
   margin-bottom: 15px;
 }
+
+.logo-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  font-family: $my-font;
+  color: $burgundy;
+  text-align: left;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 25px;
+  font-style: normal;
+  flex-shrink: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
