@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
 
-  before_action :set_booking, only: [:show]
+  before_action :set_booking, only: [:show, :destroy]
+  # before_action :set_event, only: [:show, :destroy]
 
   def index
     @bookings = Booking.all
@@ -24,23 +25,21 @@ class BookingsController < ApplicationController
   end
 
   def show
-    # We recuperate our bookings with their IDs
-  end
-
-  def edit
-  end
-
-  def update
+    # We recuperate our bookings with their ID
   end
 
   def destroy
     @booking.destroy
-    redirect_to event_bookings_path, notice: 'Booking was successfully delete.', status: :see_other
+    redirect_to bookings_path, notice: 'Booking was successfully delete.', status: :see_other
   end
 
   private
 
   def set_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def set_event
+    @event = Event.find(params[:event_id])
   end
 end
