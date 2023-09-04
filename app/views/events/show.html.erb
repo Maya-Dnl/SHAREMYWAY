@@ -13,7 +13,7 @@
 
   <% if @event.user == current_user %>
     <div class="btn-delete-edit d-flex">
-      <%= link_to my_events_events_path(@event.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{@event.name}?"}, class: "delete-event-button" do %>
+      <%= button_to event_path(@event), method: :delete, class: "delete-event-button" do %>
         <i class="fa-solid fa-trash-can"></i>
       <% end %>
       <%= link_to new_event_path(@event.id), class: "edit-event-button" do %>

@@ -39,7 +39,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.destroy
-    redirect_to @my_events, notice: 'Event was successfully delete.', status: :see_other
+    redirect_to my_events_events_path, notice: 'Event was successfully delete.', status: :see_other
   end
 
   private
@@ -51,5 +51,4 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit(:name, :description, :address, :category, :date, :photo)
   end
-
 end
