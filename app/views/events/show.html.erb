@@ -16,7 +16,7 @@
       <%= button_to event_path(@event), method: :delete, class: "delete-event-button" do %>
         <i class="fa-solid fa-trash-can"></i>
       <% end %>
-      <%= link_to new_event_path(@event.id), class: "edit-event-button" do %>
+      <%= link_to edit_event_path(@event.id), class: "edit-event-button" do %>
         <i class="fa-solid fa-pen-to-square"></i>
       <% end %>
     </div>

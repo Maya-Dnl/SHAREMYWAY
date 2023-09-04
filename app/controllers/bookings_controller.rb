@@ -33,6 +33,11 @@ class BookingsController < ApplicationController
   def update
   end
 
+  def destroy
+    @booking.destroy
+    redirect_to event_bookings_path, notice: 'Booking was successfully delete.', status: :see_other
+  end
+
   private
 
   def set_booking
