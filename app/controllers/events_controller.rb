@@ -34,7 +34,9 @@ class EventsController < ApplicationController
   end
 
   def update
-    @event.update(params[:event])
+    @event.update(event_params)
+
+    redirect_to event_path(@event), notice: 'Event was successfully updated.'
   end
 
   def destroy
