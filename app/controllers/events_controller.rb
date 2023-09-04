@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  before_action :set_event, only: [:show, :join]
+  before_action :set_event, only: [:show, :destroy, :edit, :update]
 
   def index
     @events = Event.all
@@ -26,14 +26,21 @@ class EventsController < ApplicationController
   def show
   end
 
-  # def edit
-  # end
+  def my_events
+    @events = Event.where(user: current_user)
+  end
 
-  # def update
-  # end
+  def edit
+  end
 
-  # def destroy
-  # end
+  def update
+    @event.update(params[:event])
+  end
+
+  def destroy
+    @event.destroy
+    redirect_to @my_events, notice: 'Event was successfully delete.', status: :see_other
+  end
 
   private
 
@@ -42,7 +49,7 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :description, :address, :category, :date, :image)
+    params.require(:event).permit(:name, :description, :address, :category, :date, :photo)
   end
 
 end

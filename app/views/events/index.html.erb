@@ -35,11 +35,7 @@
                   <i class="fa-regular fa-calendar icon-info when"></i>
                   <div class="display-date"><%= event.date %></div>
                 </div>
-                <%# <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> %>
-                <%# <%= cl_image_tag( "app/assets/images/bouchent-portrait-jolie-jeune-femme-isolee.jpg", class: "avatar", alt: "avatar") %>
                 <%= cl_image_tag( event.user.photo.key, alt: "NA", class: "card-trip-user avatar-bordered") %>
-
-
                 <div class="icone-categories">
                   <i class="fa-solid fa-campground"></i>
                 </div>

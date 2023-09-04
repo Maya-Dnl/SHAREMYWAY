@@ -1,12 +1,12 @@
-<h1 class="logo-left">ShareMyWay</h1>
+<h1 class="logo">ShareMyWay</h1>
 
 <h2 class="my-events title">My Events</h2>
 
 <div class="container">
   <div class="cards content-event">
       <div class="events-list" data-controller="events-list">
-        <% current_user.events.each do |event| %>
-          <%= link_to events_path do %>
+        <% @events.each do |event| %>
+          <%= link_to event_path(event) do %>
             <div class="card-event">
               <%= cl_image_tag( event.photo.key, alt: "NA", class: "card-img-top image")%>
                 <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
@@ -32,7 +32,4 @@
       </div>
     </div>
   </div>
-  <%= link_to new_event_path, class: "icon-navbar add-event" do %>
-    <i class="fa-solid fa-circle-plus"></i>
-  <% end %>
 </div>

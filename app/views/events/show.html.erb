@@ -3,16 +3,33 @@
   <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
   <%# <button class="back"></button> %>
 
-<div class="image-event-show"><%= cl_image_tag( @event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
+<div class="image-event-show"><%= cl_image_tag(@event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
 <div class="container show-event">
 
   <%= link_to events_path, class: "btn-back-all-events" do %>
     <i class="fa-solid fa-circle-chevron-left"></i>
   <% end %>
 
-  <%= button_to event_bookings_path(@event), data: { turbo_method: :post }, class: "join-event-button" do %>
-    <i class="fa-solid fa-user-plus"></i>
+
+  <% if @event.user == current_user %>
+    <div class="btn-delete-edit d-flex">
+      <%= link_to my_events_events_path(@event.id), data: {turbo_method: :delete, turbo_confirm: "Delete #{@event.name}?"}, class: "delete-event-button" do %>
+        <i class="fa-solid fa-trash-can"></i>
+      <% end %>
+      <%= link_to new_event_path(@event.id), class: "edit-event-button" do %>
+        <i class="fa-solid fa-pen-to-square"></i>
+      <% end %>
+    </div>
+
+  <% else %>
+
+    <%= button_to event_bookings_path(@event), data: { turbo_method: :post }, class: "join-event-button" do %>
+      <i class="fa-solid fa-user-plus"></i>
+    <% end %>
+
   <% end %>
+
+
 
   <div class="icon-event-categories">
     <i class="fa-solid fa-campground category"></i>
