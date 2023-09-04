@@ -1,0 +1,37 @@
+<div class="image-event-show"><%= cl_image_tag(@booking.event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
+<div class="container show-event">
+
+  <%= link_to bookings_path, class: "btn-back-all-events" do %>
+    <i class="fa-solid fa-circle-chevron-left"></i>
+  <% end %>
+
+  <%= button_to booking_path(@booking), method: :delete, class: "delete-event-button" do %>
+    <i class="fa-solid fa-trash-can"></i>
+  <% end %>
+
+  <div class="icon-event-categories">
+    <i class="fa-solid fa-campground category"></i>
+  </div>
+
+  <%= cl_image_tag(@booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-show-event") %>
+
+  <div class="show-infos">
+    <h1 class="event-title spacy"><%= @booking.event.name %></h1>
+    <div class="location-wrapper d-flex align-items-center spacy">
+      <i class="fa-solid fa-location-pin icon-info where-show"></i>
+      <div class="location size"><%= @booking.event.address %></div>
+    </div>
+    <div class="date-wrapper d-flex align-items-center">
+      <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
+      <div class="display-date size"><%= @booking.event.date %></div>
+    </div>
+    <div class="date-wrapper d-flex align-items-center">
+      <i class="fa-solid fa-user-group icon-info who-show spacy"></i>
+      <div class="count-members size"><%= @booking.event.bookings.count %> members going</div>
+    </div>
+    <div class="description">
+      <p class="infos-description">Description</p>
+        <p class="text-description"> "<%= @booking.event.description %>"</p>
+    </div>
+  </div>
+</div>

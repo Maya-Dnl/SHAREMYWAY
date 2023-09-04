@@ -8,11 +8,11 @@ Rails.application.routes.draw do
   # get "profil", to: "devise/registrations#edit"
 
   resources :events do
-    resources :bookings, only: %i[create destroy]
+    resources :bookings, only: %i[create]
     collection do
       get :my_events
     end
   end
 
-  resources :bookings, only: %i[index]
+  resources :bookings, only: %i[index show destroy]
 end
