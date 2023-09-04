@@ -27,6 +27,32 @@
   margin: 15px;
 }
 
+.delete-event-button {
+  font-size: 20px;
+  position: absolute;
+  background-color: transparent;
+  bottom: 93%;
+  left: 84%;
+  color: $white;
+  // position: relative;
+  border-radius: 50%;
+  border: none;
+  margin: 15px;
+}
+
+.edit-event-button {
+  font-size: 20px;
+  position: absolute;
+  background-color: transparent;
+  bottom: 93%;
+  left: 74%;
+  color: $white;
+  // position: relative;
+  border-radius: 50%;
+  border: none;
+  margin: 15px;
+}
+
 .show-infos{
   margin-top: 50px;
   margin-left: 20px;

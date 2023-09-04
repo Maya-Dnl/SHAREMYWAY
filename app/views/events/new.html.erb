@@ -1,12 +1,14 @@
-<div class="container show-event">
+<div class="container">
   <h1 class="logo-left">ShareMyWay</h1>
 
   <h1 class="title">New Event</h1>
   <%= simple_form_for @event do |f| %>
     <div class="file-container">
-      <%= f.input :image, as: :file,
+      <%# <%= f.input :photo, as: :file,
       input_html: { class: "input-photo", id: "input-photo" },
-      label: false %> <label for="input-photo" class="file-label-event"></label>
+      label: false %>
+      <%# <label for="input-photo" class="file-label-event"></label> %>
+      <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
     </div>
 
     <div class="tag-classic-input">
