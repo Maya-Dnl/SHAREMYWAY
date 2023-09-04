@@ -1,37 +1,40 @@
-<div class="container">
+
   <h1 class="logo-left">ShareMyWay</h1>
 
-  <h1 class="title">New Event</h1>
-  <%= simple_form_for @event do |f| %>
-    <div class="file-container">
-      <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
-    </div>
+  <h2 class="title">New Event</h2>
+    <div class="container margin-navbar">
+      <%= simple_form_for @event do |f| %>
+      <%# <%= f.input :photo, as: :file,
+      input_html: { class: "input-photo", id: "input-photo" },
+      label: false %>
+      <%# <label for="input-photo" class="file-label-event"></label> %>
+        <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
 
-    <div class="tag-classic-input">
-      <%= f.input :name, input_html: { class: "tag-classic-input1" } %>
-    </div>
 
-    <div class="tag-classic-input">
-      <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" } %>
-    </div>
+        <%= f.input :name, input_html: { class: "tag-classic-input1" } %>
 
-    <div class="tag-classic-input">
-      <%= f.input :address, input_html: { class: "tag-classic-input1" } %>
-    </div>
 
-    <div class="tag-classic-input">
-      <%= f.input :category,
-      as: :select, collection: ["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness", "Sports"], input_html: { class: "tag-classic-input1" } %>
-    </div>
 
-    <div class="tag-classic-input">
-      <%= f.input :date, input_html: { class: "tag-classic-input1"  } %>
-    </div>
+        <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" } %>
 
-    <div class="button-my-profil">
-		  <div class="form-actions">
-        <%= f.button :submit, "Create event", class: "center-text" %>
-		  </div>
+
+
+        <%= f.input :address, input_html: { class: "tag-classic-input1" } %>
+
+
+
+        <%= f.input :category,
+        as: :select, collection: ["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness", "Sports"], input_html: { class: "tag-classic-input1" } %>
+
+
+
+        <%= f.input :date, input_html: { class: "tag-classic-input1"  } %>
+
+
+        <div class="button-my-profil">
+          <div class="form-actions">
+            <%= f.button :submit, "Create event", class: "center-text" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  <% end %>
-</div>
