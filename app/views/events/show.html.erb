@@ -30,10 +30,10 @@
       <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
       <div class="display-date size"><%= @event.date %></div>
     </div>
-    <div class="icon-members">
+    <div class="date-wrapper d-flex align-items-center">
       <i class="fa-solid fa-user-group icon-info who-show spacy"></i>
+      <div class="count-members size"><%= @event.bookings.count %> members going</div>
     </div>
-    <%# <div class="members">+ 5 going</div> %>
     <div class="description">
       <p class="infos-description">Description</p>
         <p class="text-description"> "<%= @event.description %>"</p>
