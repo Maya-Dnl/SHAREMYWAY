@@ -5,19 +5,20 @@
 
 <div class="image-event-show"><%= cl_image_tag( @event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
 <div class="container show-event">
-  <button class="btn-back-all-events">
-    <%= link_to "<", events_path %>
-  </button>
 
-    <%= button_to event_bookings_path(@event), data: { turbo_method: :post }, class: "join-event-button" do %>
-      <i class="fa-solid fa-user-plus"></i>
-    <% end %>
+  <%= link_to events_path, class: "btn-back-all-events" do %>
+    <i class="fa-solid fa-circle-chevron-left"></i>
+  <% end %>
+
+  <%= button_to event_bookings_path(@event), data: { turbo_method: :post }, class: "join-event-button" do %>
+    <i class="fa-solid fa-user-plus"></i>
+  <% end %>
 
   <div class="icon-event-categories">
     <i class="fa-solid fa-campground category"></i>
   </div>
 
-  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-show-event" />
+  <%= cl_image_tag( @event.user.photo.key, alt: "NA", class: "card-trip-user avatar-show-event") %>
 
   <div class="show-infos">
     <h1 class="event-title spacy"><%= @event.name %></h1>
@@ -29,7 +30,9 @@
       <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
       <div class="display-date size"><%= @event.date %></div>
     </div>
-    <%# <div class="icon-members"></div> %>
+    <div class="icon-members">
+      <i class="fa-solid fa-user-group icon-info who-show spacy"></i>
+    </div>
     <%# <div class="members">+ 5 going</div> %>
     <div class="description">
       <p class="infos-description">Description</p>
@@ -38,8 +41,8 @@
   </div>
 </div>
 
-<% if flash[:notice].present? %>
-  <div class="alert alert-success">
+<%# <% if flash[:notice].present? %>
+  <%# <div class="alert alert-success">
     <%= flash[:notice] %>
-  </div>
+  <%# </div>
 <% end %>
