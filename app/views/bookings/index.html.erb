@@ -8,6 +8,9 @@
         <% current_user.bookings.each do |booking| %>
           <%= link_to events_path do %>
             <div class="card-event">
+              <%# <%= button_to event_booking_path(@event), method: :delete, class: "delete-event-button" do %>
+                <%# <i class="fa-solid fa-trash-can"></i> %>
+              <%# <% end %>
               <%= cl_image_tag( booking.event.photo.key, alt: "NA", class: "card-img-top image")%>
                 <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
                 <%# <%= link_to 'More', members_path(event), class: 'btn btn-primary' %>
