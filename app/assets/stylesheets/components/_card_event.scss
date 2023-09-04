@@ -1,6 +1,6 @@
 .image {
   border-radius: 16px 16px 0px 0px;
-  height: 125px;
+  height: 170px;
   object-fit: cover;
 }
 
@@ -19,7 +19,7 @@
   .location {
     color: $kakhi;
     font-family: Montserrat;
-    font-size: 10px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -28,7 +28,7 @@
   .display-date {
     color: $yellow;
     font-family: Montserrat;
-    font-size: 10px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -40,7 +40,7 @@
 .events-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 66px;
 }
 
@@ -70,9 +70,9 @@
 
 .icone-categories {
   color: $burgundy;
-  font-size: 25px;
+  font-size: 20px;
   position: absolute;
-  top: +25px;
-  right: 20px;
+  bottom: 10%;
+  right: 6%;
   padding-right: 5px;
 }

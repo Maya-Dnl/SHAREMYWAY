@@ -4,9 +4,10 @@
 
 .btn-back-all-events {
   position: absolute;
-  top: -5px;
-  left: 2px;
-  color: #AAAAAA;
+  font-size: 22px;
+  bottom: 93%;
+  left: 2%;
+  color: $white;
   // position: relative;
   border-radius: 50%;
   border: none;
@@ -17,8 +18,8 @@
   font-size: 20px;
   position: absolute;
   background-color: transparent;
-  top: -5px;
-  left: 290px;
+  bottom: 93%;
+  left: 84%;
   color: $white;
   // position: relative;
   border-radius: 50%;
@@ -33,7 +34,7 @@
 
 .category {
   position: absolute;
-  right: 15px;
+  left: 85%;
   top: 170px;
   color: $white;
   background-color: $burgundy;
@@ -69,6 +70,16 @@
   font-style: normal;
   border-radius: 5px;
   padding: 7px;
+  margin-right: 5px;
+}
+
+.who-show {
+  color: $white;
+  background-color: grey;
+  font-size: 13px;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 6px;
   margin-right: 5px;
 }
 
