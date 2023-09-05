@@ -1,6 +1,7 @@
 <div class="align-element">
-  <h1 class="logo" id="left">ShareMyWay</h1>
-  <%= link_to "X", events_path, class:"bouton-modified" %>
+<a href="/"><h1 class="logo-left">ShareMyWay</h1></a>
+<%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete} %>
+<%= link_to "X", events_path, class:"bouton-modified" %>
 </div>
 
 
@@ -35,12 +36,24 @@
                 required: true,
                 autocomplete: :current_password  %>
   </div>
-    <div class="file-container">
-      <%= f.input :photo, as: :file,
-                input_html: { class: "input-photo", id: "input-photo" },
-                label: false %>
-                <label for="input-photo" class="file-label"></label>
+
+    <div class="file-container" data-controller="change-style-input">
+        <%= f.input :photo, as: :file,
+          input_html: { class: "input-photo", id: "input-photo" },
+          label: false %>
+
+        <label
+        for="input-photo"
+        class="file-label"
+        id="avatar_user_edit"
+        data-action="change->change-style-input#background">
+
+          <%= cl_image_tag(current_user.photo.key) %>
+          <i class="fa-regular fa-pen-to-square edit-btn"></i>
+
+        </label>
     </div>
+
     <div class="tag-classic-input">
       <%= f.input :username,
                 input_html: { class: "tag-classic-input1" } %>
@@ -53,10 +66,10 @@
 
     <h4 class="center-text">Select yours favorites hobbys:</h4>
 
-    <h5>My firts hobby:</h5>
+    <h5>1. Travel and Adventure:</h5>
 
     <div class="radio-buttons-group">
-       <%= f.collection_radio_buttons :hobby1, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
+       <%= f.collection_radio_buttons :hobby1, [['Nature and Outdoors', 'Nature and Outdoors'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do  %>
             <%= b.radio_button(class: 'custom-radio-input') %>
               <div class="custom-radio-img">
