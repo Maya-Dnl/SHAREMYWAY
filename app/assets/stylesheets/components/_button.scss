@@ -1,6 +1,7 @@
 .button {
-  width: 280px;
-  height: 55px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px 10px 15px;
   background-color: #FFFFFF;
   color: #8C3333;
   font-family: Montserrat;
@@ -10,5 +11,21 @@
   cursor: pointer;
   position: absolute;
   bottom: 35px;
-  align-items: center;
+  text-align: center;
 }
+
+.general-button {
+  border-radius: 15px;
+  text-align: center;
+}
+
+.button-link {
+  background: #FFC436;
+  display: block;
+  height: 40px; /* Set the desired height */
+  line-height: 40px; /* Adjust line-height to match the height */
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px; /* Add horizontal padding for spacing */
+}
+

@@ -4,37 +4,28 @@
   <h2 class="title">New Event</h2>
     <div class="container margin-navbar">
       <%= simple_form_for @event do |f| %>
-      <%# <%= f.input :photo, as: :file,
-      input_html: { class: "input-photo", id: "input-photo" },
-      label: false %>
-      <%# <label for="input-photo" class="file-label-event"></label> %>
-        <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
 
+        <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
 
         <%= f.input :name, input_html: { class: "tag-classic-input1" } %>
 
-
-
         <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" } %>
 
+        <div class="input-group d-flex align-items-center">
+          <span class="input-group-addon"><i class="fa fa-map-marker where-show"></i></span>
+          <%= f.input :address, input_html: { class: "tag-classic-input1" }, placeholder: "Event address", label: false %>
+        </div>
 
-
-        <%= f.input :address, input_html: { class: "tag-classic-input1" } %>
-
-
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa-regular fa-calendar when-show spacy"></i></span>
+          <%= f.input :date, input_html: { class: "tag-classic-input1" }, label: false %>
+        </div>
 
         <%= f.input :category,
-        as: :select, collection: ["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness", "Sports"], input_html: { class: "tag-classic-input1" } %>
+        as: :select, collection: ["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness"], input_html: { class: "tag-classic-input1" } %>
 
-
-
-        <%= f.input :date, input_html: { class: "tag-classic-input1"  } %>
-
-
-        <div class="button-my-profil">
-          <div class="form-actions">
+        <%= link_to new_event_path, class: "general-button button-link" do %>
             <%= f.button :submit, "Create event", class: "center-text" %>
-          </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
