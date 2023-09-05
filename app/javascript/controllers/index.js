@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import ChangeStyleInputController from "./change_style_input_controller"
+application.register("change-style-input", ChangeStyleInputController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)

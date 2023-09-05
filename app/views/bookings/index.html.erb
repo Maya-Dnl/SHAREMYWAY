@@ -1,4 +1,4 @@
-<h1 class="logo">ShareMyWay</h1>
+<a href="/"><h1 class="logo">ShareMyWay</h1></a>
 
 <h2 class="my-bookings title">My Bookings</h2>
 
@@ -6,12 +6,12 @@
   <div class="cards content-event">
       <div class="events-list" data-controller="events-list">
         <% current_user.bookings.each do |booking| %>
-          <%= link_to events_path do %>
+          <%= link_to booking_path(booking) do %>
             <div class="card-event">
               <%# <%= button_to event_booking_path(@event), method: :delete, class: "delete-event-button" do %>
                 <%# <i class="fa-solid fa-trash-can"></i> %>
               <%# <% end %>
-              <%= cl_image_tag( booking.event.photo.key, alt: "NA", class: "card-img-top image")%>
+              <%= cl_image_tag(booking.event.photo.key, alt: "NA", class: "card-img-top image")%>
                 <%# La ligne si dessous est codée pour ne pas oublié de créer un btn qui nous permet d'afficher les membres participants à l'event %>
                 <%# <%= link_to 'More', members_path(event), class: 'btn btn-primary' %>
                 <div class="event-infos">
@@ -24,7 +24,7 @@
                     <i class="fa-regular fa-calendar icon-info when"></i>
                     <div class="display-date"><%= booking.event.date %></div>
                   </div>
-                  <%= cl_image_tag( booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-bordered") %>
+                  <%= cl_image_tag(booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-bordered") %>
                   <div class="icone-categories">
                     <i class="fa-solid fa-campground"></i>
                   </div>
