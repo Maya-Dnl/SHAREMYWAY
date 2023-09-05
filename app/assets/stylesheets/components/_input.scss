@@ -111,7 +111,7 @@
   align-items: center;
   justify-content: space-between;
   margin-left: 12px;
-  margin-right: 12px;
+  margin-right: 17px;
 }
 
 
@@ -145,11 +145,15 @@
 }
 
 .radio-buttons-group {
-  justify-content: center;
   margin-bottom: 40px;
   margin-top: 15px;
-  display: grid;
-  grid: repeat(2, 94px)/auto-flow 91px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  span {
+    max-width: 89px;
+  }
 }
 
 .custom-radio-label{
@@ -197,4 +201,9 @@ h5 {
   height: 100%;
   display: none;
   z-index: 1;
+}
+
+.profil-page-new {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
