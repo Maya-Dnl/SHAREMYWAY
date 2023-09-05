@@ -48,8 +48,12 @@
         id="avatar_user_edit"
         data-action="change->change-style-input#background">
 
+        <% if current_user.photo.attached? == true %>
           <%= cl_image_tag(current_user.photo.key) %>
           <i class="fa-regular fa-pen-to-square edit-btn"></i>
+        <% else %>
+          <i class="fa-solid fa-camera profil-image"></i>
+        <% end %>
 
         </label>
     </div>
