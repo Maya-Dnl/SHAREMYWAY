@@ -3,15 +3,16 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  :recoverable, :rememberable, :validatable
 
   has_many :bookings
   has_many :events, through: :bookings
   has_one_attached :photo
 
-  validates :username, presence: true
-  validates :language, presence: true
-  validates :hobby1, inclusion: { in: HOBBYS }
-  validates :hobby2, inclusion: { in: HOBBYS }
-  validates :hobby3, inclusion: { in: HOBBYS }
+# COMMENTE CAR FAIS PLANTER LE SIGN UP !!!!!!!!!!!!
+  # validates :username, presence: true
+  # validates :language, presence: true
+  # validates :hobby1, inclusion: { in: HOBBYS }
+  # validates :hobby2, inclusion: { in: HOBBYS }
+  # validates :hobby3, inclusion: { in: HOBBYS }
 end

@@ -12,8 +12,14 @@
     </div>
 
     <button class="button">
-    <%= link_to "Get Started", new_user_registration_path %>
+    <%# Si current user => le bouton redirige vers l'index %>
+    <%# Si pas de current user => le bouton redirige vers sign up%>
+    <% if current_user %>
+      <%= link_to "Get Started", events_path %>
+    <% else %>
+      <%= link_to "Get Started", new_user_registration_path %>
+    <% end %>
     </button>
-    
+
   </div>
 </div>
