@@ -1,8 +1,78 @@
+.page-signup {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%), asset-url("homepage-background.jpg") lightgray 50% / cover no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+#new_user {
+  text-align: left;
+
+  .form-inputs {
+    margin-bottom: 45px !important;
+  }
+  .user_email, .user_password {
+    margin-bottom: 25px !important;
+  }
+}
+
 .content-sign-up {
-
-}
-
-.btn-sign-up {
-  background-color: $yellow;
+  margin-top: 50px;
   text-align: center;
+
+  .text-color-white, label, .form-text {
+    color: white;
+  }
 }
+
+.modify-size-title {
+  color: $white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: $my-font;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  flex-shrink: 0;
+  margin-top: 30px;
+}
+
+.signup {
+  color: #FFFFFF;
+  font-family: Caveat;
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+
+.btn-device-primary,
+.btn-device-secondary {
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  background-color: #8C3333;
+  font-family: Montserrat;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.btn-device-primary {
+  width: 90%;
+  padding: 10px 15px 10px 15px;
+  font-size: 24px;
+  border-radius: 15px;
+  margin-top: 125px;
+}
+
+.btn-device-secondary {
+  width: 70%;
+  padding: 5px 15px 5px 15px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+// .content-center {
+//   color: $white;
+//   justify-content: center;
+// }

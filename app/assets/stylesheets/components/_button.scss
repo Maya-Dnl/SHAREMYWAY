@@ -1,6 +1,7 @@
 .button {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 90%;
   padding: 10px 15px 10px 15px;
   background-color: #FFFFFF;
   color: #8C3333;
@@ -28,4 +29,3 @@
   text-decoration: none;
   padding: 0 20px; /* Add horizontal padding for spacing */
 }
-
