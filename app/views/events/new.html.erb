@@ -24,8 +24,7 @@
         <%= f.input :category,
         as: :select, collection: ["Hiking and Trekking", "Backpacking and Camping", "Road Trips and Drives", "Wildlife and Safari", "Language Learning", "Photography Workshops", "Cooking Classes", "Coding and Tech Workshops", "Yoga and Meditation", "Group Fitness Classes", "Outdoor Sports", "Personal Training"], input_html: { class: "tag-classic-input1" } %>
 
-        <%= link_to new_event_path, class: "general-button button-link" do %>
-            <%= f.button :submit, "Create event", class: "center-text" %>
-        <% end %>
+        <%= f.button :submit, "Create event", class: "center-text general-button" %>
+
       <% end %>
     </div>
