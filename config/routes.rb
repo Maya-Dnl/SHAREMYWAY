@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: %i[index show destroy]
+
+  get "/profile", to: "profiles#show"
 end

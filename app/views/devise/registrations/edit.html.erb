@@ -46,12 +46,11 @@
         for="input-photo"
         class="file-label"
         id="avatar_user_edit">
-        <%# je targette ma balise img  %>
-        <%# data-change-style-input-target="newBackground"> %>
+
           <div data-change-style-input-target="user", class="activ">
             <%= cl_image_tag(current_user.photo.key)%>
           </div>
-          <%# je creer un element img en ruby car il est dans mon input, je lui donne une clase d-none, et je lui donne la classe du designe file-label %>
+
           <div data-change-style-input-target="check", class="d-none">
             <%= image_tag("check_list.jpg", :alt => "checked" ) %>
           </div>
@@ -78,10 +77,10 @@
 
     <h4 class="center-text">Select yours favorites hobbys:</h4>
 
-    <h5>1. Travel and Adventure:</h5>
+    <h5>Travel and Adventure</h5>
 
     <div class="radio-buttons-group">
-       <%= f.collection_radio_buttons :hobby1, [['Nature and Outdoors', 'Nature and Outdoors'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
+       <%= f.collection_radio_buttons :hobby1, [['Hiking and Trekking', 'Hiking and Trekking'], ['Backpacking and Camping', 'Backpacking and Camping'], ['Road Trips and Drives', 'Road Trips and Drives'], ['Wildlife and Safari', 'Wildlife and Safari']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do  %>
             <%= b.radio_button(class: 'custom-radio-input') %>
               <div class="custom-radio-img">
@@ -92,10 +91,10 @@
         <% end %>
     </div>
 
-    <h5>My second hobby:</h5>
+    <h5>Learning and Workshops</h5>
 
     <div class="radio-buttons-group">
-       <%= f.collection_radio_buttons :hobby2, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
+       <%= f.collection_radio_buttons :hobby2, [['Language Learning', 'Language Learning'], ['Photography Workshops', 'Photography Workshops'], ['Cooking Classes', 'Cooking Classes'], ['Coding and Tech Workshops', 'Coding and Tech Workshops']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do %>
             <%= b.radio_button(class: 'custom-radio-input') %>
             <div class="custom-radio-img">
@@ -106,10 +105,10 @@
         <% end %>
     </div>
 
-    <h5>My third hobby:</h5>
+    <h5>Fitness and Wellness</h5>
 
     <div class="radio-buttons-group">
-       <%= f.collection_radio_buttons :hobby3, [['Nature and Outdoors', 'Nature and Outdoors'], ['Education and Learning', 'Education and Learning'], ['Sports', 'Sports'], ['Games and Entertainment', 'Games and Entertainment'], ['Food and Gastronomy', 'Food and Gastronomy'], ['Art and Culture', 'Art and Culture'], ['Science and Exploration', 'Science and Exploration'], ['Health and Wellness', 'Health and Wellness']], :first, :last do |b| %>
+       <%= f.collection_radio_buttons :hobby3, [['Yoga and Meditation', 'Yoga and Meditation'], ['Group Fitness Classes', 'Group Fitness Classes'], ['Outdoor Sports', 'Outdoor Sports'], ['Personal Training', 'Personal Training']], :first, :last do |b| %>
           <%= b.label(class: "custom-radio-label") do %>
             <%= b.radio_button(class: 'custom-radio-input') %>
               <div class="custom-radio-img">
