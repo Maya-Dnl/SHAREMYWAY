@@ -39,14 +39,22 @@
 
     <div class="file-container" data-controller="change-style-input">
         <%= f.input :photo, as: :file,
-          input_html: { class: "input-photo", id: "input-photo" },
+          input_html: { class: "input-photo", id: "input-photo", data: { action: "change->change-style-input#background" } },
           label: false %>
 
         <label
         for="input-photo"
         class="file-label"
-        id="avatar_user_edit"
-        data-action="change->change-style-input#background">
+        id="avatar_user_edit">
+        <%# je targette ma balise img  %>
+        <%# data-change-style-input-target="newBackground"> %>
+          <div data-change-style-input-target="user", class="activ">
+            <%= cl_image_tag(current_user.photo.key)%>
+          </div>
+          <%# je creer un element img en ruby car il est dans mon input, je lui donne une clase d-none, et je lui donne la classe du designe file-label %>
+          <div data-change-style-input-target="check", class="d-none">
+            <%= image_tag("check_list.jpg", :alt => "checked" ) %>
+          </div>
 
         <% if current_user.photo.attached? == true %>
           <%= cl_image_tag(current_user.photo.key) %>

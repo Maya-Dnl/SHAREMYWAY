@@ -21,11 +21,21 @@
           <%= f.input :date, input_html: { class: "tag-classic-input1" }, label: false %>
         </div>
 
-        <%= f.input :category,
-        as: :select, collection: ["Hiking and Trekking", "Backpacking and Camping", "Road Trips and Drives", "Wildlife and Safari", "Language Learning", "Photography Workshops", "Cooking Classes", "Coding and Tech Workshops", "Yoga and Meditation", "Group Fitness Classes", "Outdoor Sports", "Personal Training"], input_html: { class: "tag-classic-input1" } %>
+        <%# <%= f.input :category, %>
+        <%# as: :select, collection: ["Hiking and Trekking", "Backpacking and Camping", "Road Trips and Drives", "Wildlife and Safari", "Language Learning", "Photography Workshops", "Cooking Classes", "Coding and Tech Workshops", "Yoga and Meditation", "Group Fitness Classes", "Outdoor Sports", "Personal Training"], input_html: { class: "tag-classic-input1" } %>
 
-        <%= link_to new_event_path, class: "general-button button-link" do %>
-            <%= f.button :submit, "Create event", class: "center-text" %>
-        <% end %>
+        <%= f.select :category,
+        options_for_select(["Nature and Outdoors", "Education and Learning", "Sports", "Games and Entertainment", "Food and Gastronomy", "Art and Culture", "Science and Exploration", "Health and Wellness"]),
+        { include_blank: 'Select a category' },
+        {
+          id: 'category-select',
+          class: 'tag-classic-input1',
+          "data-controller": "category",
+          "data-category-controller-icon-target": "icon"
+        } %>
+        <i data-category-target="icon" class="fas"></i>
+
+        <%= f.button :submit, "Create event", class: "center-text general-button" %>
+
       <% end %>
     </div>

@@ -16,16 +16,11 @@
 }
 
 .general-button {
-  border-radius: 15px;
+  border-radius: 8px;
   text-align: center;
-}
-
-.button-link {
   background: #FFC436;
-  display: block;
-  height: 40px; /* Set the desired height */
-  line-height: 40px; /* Adjust line-height to match the height */
-  color: #fff;
-  text-decoration: none;
-  padding: 0 20px; /* Add horizontal padding for spacing */
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  padding: 0 20px;
 }
