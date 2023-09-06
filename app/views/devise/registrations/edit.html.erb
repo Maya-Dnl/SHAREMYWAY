@@ -121,7 +121,9 @@
 
     <div class="button-my-profil">
       <div class="form-actions">
+      <%= link_to profile_path do %>
         <%= f.button :submit, "Save profile", class: "center-text" %>
+      <% end %>
       </div>
   </div>
 <% end %>
