@@ -219,7 +219,7 @@ event9.save
 
 
 event10 = Event.create!(
-  name: "Montmartre Photography Workshop",
+  name: "Photography Workshop",
   address: "(Paris, France",
   date: "29/09/2023",
   category: "Photography Workshops",
@@ -239,7 +239,7 @@ event11 = Event.create!(
   date: "11/01/2024",
   category: "Coding and Tech Workshops",
   description: "Dive into the world of tech with seminars and workshops in Nantes, a city known for its growing tech scene and innovation. Connect with experts, explore cutting-edge technology, and gain insights into the future of the tech industry.",
-  user: user8
+  user: user6
 )
 
 file = File.open("app/assets/images/le-wagon-logo.png")
