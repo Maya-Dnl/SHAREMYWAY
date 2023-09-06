@@ -15,9 +15,9 @@
     <%# Si current user => le bouton redirige vers l'index %>
     <%# Si pas de current user => le bouton redirige vers sign up%>
     <% if current_user %>
-      <%= link_to "Get Started", events_path %>
+      <%= link_to "Get Started", events_path, class:"fw-bold" %>
     <% else %>
-      <%= link_to "Get Started", new_user_registration_path %>
+      <%= link_to "Get Started", new_user_registration_path, class:"fw-bold" %>
     <% end %>
     </button>
 
