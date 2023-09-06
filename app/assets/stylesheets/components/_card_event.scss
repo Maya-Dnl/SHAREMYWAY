@@ -2,14 +2,17 @@
   border-radius: 16px 16px 0px 0px;
   height: 170px;
   object-fit: cover;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.43) 0%, rgba(0, 0, 0, 0.36) 18.52%, rgba(0, 0, 0, 0.00) 56.31%), url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
 .event-infos {
   position: relative;
+  padding-left: 5px;
+  padding-bottom: 5px;
   .event-title {
     color: #000;
     font-family: Montserrat;
-    font-size: 14px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -19,7 +22,7 @@
   .location {
     color: $kakhi;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -28,7 +31,7 @@
   .display-date {
     color: $yellow;
     font-family: Montserrat;
-    font-size: 12px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
