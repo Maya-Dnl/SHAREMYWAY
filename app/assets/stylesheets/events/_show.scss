@@ -119,3 +119,82 @@
   font-size: 16px;
   font-style: italic;
 }
+
+.where-show-new {
+  color: $white;
+  background-color: $kakhi;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.when-show-new {
+  color: $white;
+  background-color: $yellow;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.what-show-new {
+  color: $white;
+  background-color: $burgundy;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#category-icon {
+  color: $white;
+  background-color: $burgundy;
+  font-style: normal;
+  border-radius: 5px;
+  padding: 8px;
+  height: 39px;
+  width: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-group-addon-new{
+  height: 39px;
+  width: 39px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.event_address{
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.event_date{
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.event_category{
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.input-wrapper-new{
+  margin-bottom: 20px;
+}

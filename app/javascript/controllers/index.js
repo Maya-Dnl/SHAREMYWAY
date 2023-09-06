@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import CategoryController from "./category_controller"
+application.register("category", CategoryController)
+
 import ChangeStyleInputController from "./change_style_input_controller"
 application.register("change-style-input", ChangeStyleInputController)
 
