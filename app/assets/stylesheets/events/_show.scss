@@ -1,5 +1,17 @@
+.image-event-show {
+  position: relative;
+}
 .img-show {
   height: 230px;
+  object-fit: cover;
+}
+.image-event-gradiant {
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, transparent, transparent 50%, #181717 100%);
 }
 
 .btn-back-all-events {

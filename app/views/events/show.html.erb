@@ -3,7 +3,10 @@
   <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
   <%# <button class="back"></button> %>
 
-<div class="image-event-show"><%= cl_image_tag(@event.photo.key, alt: "NA", class: "card-img-top img-show") %></div>
+<div class="image-event-show">
+  <%= cl_image_tag(@event.photo.key, alt: "NA", class: "card-img-top img-show") %>
+  <div class="image-event-gradiant"></div>
+</div>
 <div class="container show-event">
 
   <%= link_to events_path, class: "btn-back-all-events" do %>
