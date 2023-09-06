@@ -10,35 +10,42 @@
     <div class="file-label", id="avatar_user_edit",>
       <div class= "">
         <%= cl_image_tag(current_user.photo.key) %>
-        <i class="fa-regular fa-pen-to-square edit-btn"></i>
+          <%= link_to edit_user_registration_path do %>
+            <i class="fa-regular fa-pen-to-square edit-btn"></i>
+          <% end %>
       </div>
     </div>
   </div>
 
   <div>
-    <p>Username:</p>
-    <%= current_user.username %>
+    <p class="text-profil">Username:</p>
+    <div class="answer-text-profil">
+      <%= current_user.username %>
+    </div>
   </div>
 
     <div>
-    <p>Language:</p>
-    <%= current_user.language %>
+    <p class="text-profil">Language:</p>
+    <div class="answer-text-profil">
+      <%= current_user.language %>
+    </div>
   </div>
 
   <div>
-  <p>Interests (up to 3 categories)</p>
+  <p class="mb-0">Interests (up to 3 categories)</p>
   </div>
 
-
-  <div class="profil-page-new">
-
+  <div class="main-div">
+    <div class="profil-page-new">
        <% activities = ['Hiking and Trekking', 'Backpacking and Camping', 'Road Trips and Drives', 'Wildlife and Safari', 'Language Learning', 'Photography Workshops', 'Cooking Classes', 'Coding and Tech Workshops', 'Yoga and Meditation', 'Group Fitness Classes', 'Outdoor Sports', 'Personal Training'] %>
-       <% activities.each do |activitie| %>
-        <div class="custom-radio-img">
-          <%= image_tag("#{activitie.gsub(" ", "-")}.svg", class:"image-size" )%>
-          <span class="custom-radio-text"><%= activitie %></span>
-        </div>
+        <% activities.each do |activitie| %>
+          <div class="custom-radio-label-2">
+              <div class="custom-radio-img">
+                <%= image_tag("#{activitie.gsub(" ", "-")}.svg", class:"image-size" )%>
+              </div>
+                <span class="custom-radio-text"><%= activitie %></span>
+          </div>
        <% end %>
-
+    </div>
   </div>
 </div>
