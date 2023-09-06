@@ -5,8 +5,10 @@
     <%= link_to 'Sign Out', destroy_user_session_path, data: {turbo_method: :delete} %>
   </div>
 
+  <h1 class="title-profil mb-4 mt-4">My profile</h1>
 
-  <div class="file-container mt-3">
+
+  <div class="file-container mt-3 mb-4">
     <div class="file-label", id="avatar_user_edit",>
       <div class= "">
         <%= cl_image_tag(current_user.photo.key) %>
@@ -18,35 +20,32 @@
   </div>
 
   <div>
-    <p class="text-profil">Username:</p>
+    <p class="text-profil ms-4">Username:</p>
     <div class="answer-text-profil">
       <%= current_user.username %>
     </div>
   </div>
 
     <div>
-    <p class="text-profil">Language:</p>
+    <p class="text-profil ms-4">Language:</p>
     <div class="answer-text-profil">
       <%= current_user.language %>
     </div>
   </div>
 
   <div>
-  <p class="mb-0">Interests (up to 3 categories)</p>
+  <p class="mb-4 ms-4">Interests (up to 3 categories)</p>
   </div>
 
-  <div class="main-div">
-    <div class="profil-page-new">
-       <% activities = ['Hiking and Trekking', 'Backpacking and Camping', 'Road Trips and Drives', 'Wildlife and Safari', 'Language Learning', 'Photography Workshops', 'Cooking Classes', 'Coding and Tech Workshops', 'Yoga and Meditation', 'Group Fitness Classes', 'Outdoor Sports', 'Personal Training'] %>
-        <% activities.each do |activitie| %>
-          <div class="custom-radio-label-2">
-              <div class="custom-radio-img">
-                <%= image_tag("#{activitie.gsub(" ", "-")}.svg", class:"image-size" )%>
-                <%# si le acitivitie est egale a current user choice,  %>
-              </div>
-                <span class="custom-radio-text"><%= activitie %></span>
+  <div class="profil-page-new">
+     <% my_user_hobbies = [current_user.hobby1, current_user.hobby2, current_user.hobby3] %>
+       <% my_user_hobbies.each do |hobbie| %>
+        <div class="custom-radio-label-2">
+          <div class="custom-radio-img">
+            <%= image_tag("#{hobbie.gsub(" ", "-")}.svg", class:"image-size" )%>
           </div>
-       <% end %>
-    </div>
+             <span class="custom-radio-text"><%= hobbie %></span>
+        </div>
+      <% end %>
   </div>
 </div>

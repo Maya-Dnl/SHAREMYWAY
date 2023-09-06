@@ -129,8 +129,8 @@
 }
 /* Style de l'image qui remplacera le bouton radio */
 .custom-radio-img {
-  width: 51px;
-  height: 51px;
+  width: 70px;
+  height: 70px;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -179,12 +179,12 @@ h5 {
 
 
 .image-size {
-  width: 22px;
+  width: 30px;
 }
 
 .custom-radio-text {
   font-family: Montserrat;
-  font-size: 11px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -205,7 +205,7 @@ h5 {
 
 .profil-page-new {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .custom-radio-label-2{
@@ -226,9 +226,12 @@ h5 {
   color: #6B6B6B;
   font-family: Montserrat;
   font-size: 14px;
-  padding: 25px;
+  padding: 10px 25px 25px 25px;
 }
 
-.main-div {
-  padding: 10px 0px 80px 0px;
+.title-profil {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: bold;
 }
