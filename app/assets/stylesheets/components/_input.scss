@@ -207,3 +207,28 @@ h5 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.custom-radio-label-2{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 105px;
+}
+
+.text-profil {
+  font-family: 'arial';
+  border-radius: 8px;
+  margin: 0px;
+}
+
+.answer-text-profil {
+  color: #6B6B6B;
+  font-family: Montserrat;
+  font-size: 14px;
+  padding: 25px;
+}
+
+.main-div {
+  padding: 10px 0px 60px 0px;
+}
