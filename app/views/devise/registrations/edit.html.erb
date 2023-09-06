@@ -47,19 +47,21 @@
         class="file-label"
         id="avatar_user_edit">
 
+        <% if current_user.photo.attached? == true %>
           <div data-change-style-input-target="user", class="activ">
             <%= cl_image_tag(current_user.photo.key)%>
           </div>
-
           <div data-change-style-input-target="check", class="d-none">
             <%= image_tag("check_list.jpg", :alt => "checked" ) %>
           </div>
-
-        <% if current_user.photo.attached? == true %>
-          <%= cl_image_tag(current_user.photo.key) %>
           <i class="fa-regular fa-pen-to-square edit-btn"></i>
         <% else %>
-          <i class="fa-solid fa-camera profil-image"></i>
+          <div data-change-style-input-target="user", class="activ">
+            <i class="fa-solid fa-camera profil-image"></i>
+          </div>
+          <div data-change-style-input-target="check", class="d-none">
+            <%= image_tag("check_list.jpg", :alt => "checked" ) %>
+          </div>
         <% end %>
 
         </label>
