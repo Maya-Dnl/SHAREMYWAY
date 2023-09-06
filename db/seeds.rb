@@ -58,10 +58,6 @@ user3.save
 
 
 
-
-
-
-
 user4 = User.create!(
   email: "marie.pouetpouet@gmail.com",
   password: "123456",
@@ -140,6 +136,7 @@ event1 = Event.create!(
   name: "Mont Saint-Michel Guided Tour",
   address: "Mont-Saint-Michel, France",
   date: "21/10/2024",
+  category: "Road Trips and Drives",
   description: "Led by our knowledgeable local guide, you'll discover the rich history and intriguing legends surrounding Mont Saint-Michel. Wander through the winding streets of the medieval village, marvel at the stunning Gothic abbey perched atop the rocky island, and learn about the fascinating tides that shape this unique landscape.",
   user: user2
 )
@@ -152,6 +149,7 @@ event2 = Event.create!(
   name: "Outdoor Movie Night",
   address: "Nantes, France",
   date: "13/09/2023",
+  category: "Coding and Tech Workshops",
   description: "Experience the magic of outdoor cinema in the heart of Nantes! Join us for an enchanting evening under the stars as we screen a captivating film in a unique open-air setting. Bring your blankets, gather your friends and family, and immerse yourself in the cinematic atmosphere.",
   user: user8
 )
@@ -193,7 +191,7 @@ event8 = Event.create!(
   name: "Paris French Language Meetup",
   address: "Paris, France",
   date: "02/03/2024",
-  category: "",
+  category: "Language Learning",
   description: "Join a lively French language meetup group in Paris to practice your conversational skills while connecting with fellow language enthusiasts. Immerse yourself in French culture and language, and make new friends in the enchanting city of Paris.",
   user: user3
 )
