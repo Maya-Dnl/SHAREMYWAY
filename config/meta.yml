@@ -1,0 +1,5 @@
+meta_name: "ShareMyWay"
+meta_title: "ShareMyWay - Let's discover the world.. One click at time"
+meta_description: "ShareMyWay is the best platform to meet people."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@your_twitter_account"   # required for Twitter Cards
