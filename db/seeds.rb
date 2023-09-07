@@ -130,7 +130,19 @@ file = File.open("app/assets/images/image-nono.png")
 user8.photo.attach(io: file, filename: "image-nono.png", content_type: "image/jpg")
 user8.save
 
+user9 = User.create!(
+  email: "bernard.roiser@gmail.com",
+  password: "123456",
+  username: "Nanard",
+  language: "French",
+  hobby1: "Outdoor Sports",
+  hobby2: "Coding and Tech Workshops",
+  hobby3: "Photography Workshops"
+)
 
+file = File.open("app/assets/images/guy-worldface-espagnol-dans-fond-blanc.jpg")
+user9.photo.attach(io: file, filename: "guy-worldface-espagnol-dans-fond-blanc.jpg", content_type: "image/jpg")
+user9.save
 
 event1 = Event.create!(
   name: "Mont Saint-Michel Guided Tour",
@@ -331,3 +343,42 @@ event17 = Event.create!(
 file = File.open("app/assets/images/gens-diversite-classe-exercice-relax-concept.jpg")
 event17.photo.attach(io: file, filename: "gens-diversite-classe-exercice-relax-concept.jpg", content_type: "image/jpg")
 event17.save
+
+event18 = Event.create!(
+  name: "muscu basic-fit",
+  address: "Nantes, France",
+  date: "14/12/2023",
+  category: "Personal Training",
+  description: "Come with us for take a big biceps in ",
+  user: user6
+)
+
+file = File.open("app/assets/images/portrait-effronte-middleaged-fitness-guy-faisant-du-sport-fond-orange-flex-biceps-hol.jpg")
+event18.photo.attach(io: file, filename: "portrait-effronte-middleaged-fitness-guy-faisant-du-sport-fond-orange-flex-biceps-hol.jpg", content_type: "image/jpg")
+event18.save
+
+event19 = Event.create!(
+  name: "Culinary delights",
+  address: "Bordeaux, France",
+  date: "04/12/2023",
+  category: "Cooking Classes",
+  description: "Explore the world of culinary delights.",
+  user: user7
+)
+
+file = File.open("app/assets/images/gaufres-belges-gros-plan.jpg")
+event19.photo.attach(io: file, filename: "gaufres-belges-gros-plan.jpg", content_type: "image/jpg")
+event19.save
+
+event20 = Event.create!(
+  name: "successful of entrepreneurship",
+  address: "Nantes, France",
+  date: "28/11/2023",
+  category: "Coding and Tech Workshops",
+  description: "Learn the secrets of successful entrepreneurship.",
+  user: user2
+)
+
+file = File.open("app/assets/images/bel-homme-pensif-costume-levant-yeux-pensant-faire-choix-reflechissant-idees-debout-contre.jpg")
+event20.photo.attach(io: file, filename: "bel-homme-pensif-costume-levant-yeux-pensant-faire-choix-reflechissant-idees-debout-contre.jpg", content_type: "image/jpg")
+event20.save
