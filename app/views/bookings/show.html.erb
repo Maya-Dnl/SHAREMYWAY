@@ -9,8 +9,32 @@
     <i class="fa-solid fa-trash-can"></i>
   <% end %>
 
-  <div class="icon-event-categories">
-    <i class="fa-solid fa-campground category"></i>
+<div class="category">
+    <% if @booking.event.category == "Hiking and Trekking" %>
+      <i class="fa-solid fa-person-hiking"></i>
+    <% elsif @booking.event.category == "Backpacking and Camping" %>
+      <i class="fa-solid fa-campground"></i>
+    <% elsif @booking.event.category == "Road Trips and Drives" %>
+      <i class="fa-solid fa-car"></i>
+    <% elsif @booking.event.category == "Wildlife and Safari" %>
+      <i class="fa-solid fa-hippo"></i>
+    <% elsif @booking.event.category == "Language Learning" %>
+      <i class="fa-solid fa-language"></i>
+    <% elsif @booking.event.category == "Photography Workshops" %>
+      <i class="fa-solid fa-camera"></i>
+    <% elsif @booking.event.category == "Cooking Classes" %>
+      <i class="fa-solid fa-cookie-bite"></i>
+    <% elsif @booking.event.category == "Coding and Tech Workshops" %>
+      <i class="fa-solid fa-book-open"></i>
+    <% elsif @booking.event.category == "Yoga and Meditation" %>
+      <i class="fa-solid fa-spa"></i>
+    <% elsif @booking.event.category == "Group Fitness Classes" %>
+      <i class="fa-solid fa-people-group"></i>
+    <% elsif @booking.event.category == "Outdoor Sports" %>
+      <i class="fa-solid fa-cloud-sun"></i>
+    <% else @booking.event.category == "Personal Training" %>
+      <i class="fa-solid fa-dumbbell"></i>
+    <% end %>
   </div>
 
   <%= cl_image_tag( @booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-show-event") %>
