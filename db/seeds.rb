@@ -215,7 +215,7 @@ event8.save
 
 event9 = Event.create!(
   name: " Beachfront Yoga Retreat",
-  address: "Yoga and Meditation",
+  address: "Rezé, France",
   date: "25/09/2023",
   category: "Yoga and Meditation",
   description: "Find inner peace on the beautiful beaches of Nice with a beachfront yoga retreat. Practice yoga and meditation while listening to the soothing sound of the Mediterranean. Rejuvenate your mind and body in the tranquil surroundings of the French Riviera.",
@@ -316,13 +316,33 @@ event15.photo.attach(io: file, filename: "cooking-provence.jpg", content_type: "
 event15.save
 
 
+event25 = Event.create!(
+  name:  "Wine Tasting Experience",
+  address: "Nantes, France",
+  date: "15/01/2024",
+  category: "Cooking Classes",
+  description: "Indulge your senses in a delightful wine tasting experience in Nantes.
+  Sample a curated selection of exquisite French wines.
+  Learn about the regions and grapes that make these wines special.
+  Join us for an evening of wine appreciation and gastronomic pleasures.
+  - Address: 24 Rue du Château, 44000 Nantes, France
+  - Time: 7:00 PM",
+  user: user3
+)
+
+file = File.open("app/assets/images/moments-celebration-entre-amies.jpg")
+event25.photo.attach(io: file, filename: "moments-celebration-entre-amies.jpg", content_type: "image/jpg")
+event25.save
+
 
 event16 = Event.create!(
-  name: "SunnyYogi",
+  name: "SunnYogi",
   address: "Nantes, France",
   date: "09/09/2023",
   category: "Yoga and Meditation",
-  description: "Unwind and rejuvenate at The Wagon in Nantes with our special yoga event led by the experienced instructor, Nolwein. This serene gathering offers a tranquil escape from the city's hustle and bustle, providing an opportunity to harmonize mind and body through yoga and meditation.",
+  description: "Unwind and rejuvenate at The Wagon in Nantes with our special yoga event led by the experienced instructor, Nolwein. This serene gathering offers a tranquil escape from the city's hustle and bustle, providing an opportunity to harmonize mind and body through yoga and meditation.
+  - Address: Jardin des Plantes, 44000 Nantes, France
+  - Date and Time: Wednesdays and Sundays at 9:00 AM",
   user: user7
 )
 
@@ -345,40 +365,97 @@ event17.photo.attach(io: file, filename: "gens-diversite-classe-exercice-relax-c
 event17.save
 
 event18 = Event.create!(
-  name: "muscu basic-fit",
+  name: "Canal Kayak Expedition",
   address: "Nantes, France",
-  date: "14/12/2023",
-  category: "Personal Training",
-  description: "Come with us for take a big biceps in ",
-  user: user6
+  date: "29/09/2023",
+  category: "Outdoor Sports",
+  description:
+  "Experience the thrill of kayaking on Nantes' picturesque canals.
+  Paddle through the heart of the city and enjoy stunning urban views.
+  Whether you're a novice or experienced kayaker, this adventure is for you.
+  Join us for a relaxing and exciting journey on the water.
+  - Address: Quai de la Fosse, 44000 Nantes, France
+  - Time: 2:00 PM",
+  user: user1
 )
 
-file = File.open("app/assets/images/portrait-effronte-middleaged-fitness-guy-faisant-du-sport-fond-orange-flex-biceps-hol.jpg")
-event18.photo.attach(io: file, filename: "portrait-effronte-middleaged-fitness-guy-faisant-du-sport-fond-orange-flex-biceps-hol.jpg", content_type: "image/jpg")
+file = File.open("app/assets/images/couple-kayak-riviere.jpg")
+event18.photo.attach(io: file, filename: "couple-kayak-riviere.jpg", content_type: "image/jpg")
 event18.save
 
-event19 = Event.create!(
-  name: "Culinary delights",
-  address: "Bordeaux, France",
-  date: "04/12/2023",
-  category: "Cooking Classes",
-  description: "Explore the world of culinary delights.",
-  user: user7
+event21 = Event.create!(
+  name:  "Pyrenees Mountain Hike",
+  address: "Chamonix, France",
+  date: "28/12/2023",
+  category: "Hiking and Trekking",
+  description: "Explore scenic trails in the Pyrenees. Discover breathtaking natural beauty. Meet fellow hiking enthusiasts. Create unforgettable outdoor memories.",
+  user: user9
 )
 
-file = File.open("app/assets/images/gaufres-belges-gros-plan.jpg")
-event19.photo.attach(io: file, filename: "gaufres-belges-gros-plan.jpg", content_type: "image/jpg")
-event19.save
+file = File.open("app/assets/images/photo-vue-arriere-randonneurs-debout-au-bord-colline-cote-azur.jpg")
+event21.photo.attach(io: file, filename: "photo-vue-arriere-randonneurs-debout-au-bord-colline-cote-azur.jpg", content_type: "image/jpg")
+event21.save
 
 event20 = Event.create!(
-  name: "successful of entrepreneurship",
+  name: "Nantes Bike Adventure",
   address: "Nantes, France",
   date: "28/11/2023",
-  category: "Coding and Tech Workshops",
-  description: "Learn the secrets of successful entrepreneurship.",
+  category: "Road Trips and Drives",
+  description: "
+  Hop on your bike and explore Nantes' charming streets and scenic routes.
+  Visit iconic landmarks, parks, and historic neighborhoods.
+  Learn about the city's history and culture from our expert guides.
+  Get ready for a fun and active city tour by bike.
+  - Address: 8 Rue de l'Héronnière, 44000 Nantes, France
+  - Time: 9:30 AM",
   user: user2
 )
 
-file = File.open("app/assets/images/bel-homme-pensif-costume-levant-yeux-pensant-faire-choix-reflechissant-idees-debout-contre.jpg")
-event20.photo.attach(io: file, filename: "bel-homme-pensif-costume-levant-yeux-pensant-faire-choix-reflechissant-idees-debout-contre.jpg", content_type: "image/jpg")
+file = File.open("app/assets/images/jeune-homme-sportif-velo-dans-ville-europeenne-sports-milieu-urbain.jpg")
+event20.photo.attach(io: file, filename: "jeune-homme-sportif-velo-dans-ville-europeenne-sports-milieu-urbain.jpg", content_type: "image/jpg")
 event20.save
+
+
+event22 = Event.create!(
+  name:  "Forest Camping Adventure",
+  address: "Fontainebleau, France",
+  date: "03/12/2023",
+  category: " Backpacking and Camping",
+  description: "Camp under the stars in the beautiful Fontainebleau forest. Learn wilderness survival techniques. Share stories around the campfire. Experience outdoor adventure like never before.",
+  user: user3
+)
+
+file = File.open("app/assets/images/couple-faible-angle-tente-camping-pendant-nuit.jpg")
+event22.photo.attach(io: file, filename: "couple-faible-angle-tente-camping-pendant-nuit.jpg", content_type: "image/jpg")
+event22.save
+
+event23 = Event.create!(
+  name:  "Safari in Vanoise National Park",
+  address: "Modane, France",
+  date: "15/12/2023",
+  category: "Wildlife and Safari",
+  description: "Encounter wildlife in Vanoise National Park. Encounter wildlife in Vanoise National Park. Learn about nature conservation. Experience a unique safari in France.",
+  user: user6
+)
+
+file = File.open("app/assets/images/belle-photo-cerf-virginie-dans-montagnes-rocheuses.jpg")
+event23.photo.attach(io: file, filename: "belle-photo-cerf-virginie-dans-montagnes-rocheuses.jpg", content_type: "image/jpg")
+event23.save
+
+event24 = Event.create!(
+  name:  "Creative Art Class in Nantes",
+  address: "Nantes, France",
+  date: "15/12/2024",
+  category: "Photography Workshops",
+  description: "Unleash your creativity in our inspiring art workshop in Nantes.
+  Explore various art mediums and techniques.
+  Receive guidance and instruction from talented local artists.
+  Create your own masterpiece and connect with fellow art enthusiasts.
+  - Address: 14 Rue Saint-Domingue, 44000 Nantes, France
+  - Time: 6:00 PM",
+  user: user5
+)
+
+file = File.open("app/assets/images/portrait-bel-homme-barbu-dans-studio-art.jpg")
+event24.photo.attach(io: file, filename: "portrait-bel-homme-barbu-dans-studio-art.jpg", content_type: "image/jpg")
+event24.save
