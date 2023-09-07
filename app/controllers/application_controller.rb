@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def user_root_path
-    profile_url
+    profile_path
   end
 
   def configure_permitted_parameters
