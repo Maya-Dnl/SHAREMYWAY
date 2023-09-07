@@ -5,20 +5,55 @@
     <div class="container margin-navbar" data-controller="category">
       <%= simple_form_for @event do |f| %>
 
-        <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
+        <%# <%= f.input :photo, as: :file, input_html: { class: 'file-label-event form-control' } %>
 
-        <%= f.input :name, input_html: { class: "tag-classic-input1" } %>
+        <div class="file-container" data-controller="change-style-input">
+          <%= f.input :photo, as: :file,
+          input_html: { class: "input-photo", id: "input-photo", data: { action: "change->change-style-input#background" } },
+          label: false %>
 
-        <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" } %>
+          <label
+          for="input-photo"
+          class="file-label-new"
+          id="avatar_user_edit_new">
+
+          <% if @event.photo.attached? == true %>
+            <div data-change-style-input-target="user", class="activ">
+              <%= cl_image_tag(@event.photo.key)%>
+            </div>
+            <div data-change-style-input-target="check", class="d-none">
+              <%= image_tag("Blackcheckbox.png", :alt => "checked" ) %>
+            </div>
+            <i class="fa-regular fa-pen-to-square edit-btn"></i>
+          <% else %>
+            <div data-change-style-input-target="user", class="activ">
+              <i class="fa-solid fa-camera profil-image"></i>
+            </div>
+            <div data-change-style-input-target="check", class="d-none">
+              <%= image_tag("Blackcheckbox.png", :alt => "checked" ) %>
+            </div>
+          <% end %>
+
+        </label>
+
+        </div>
+
+        <%= f.input :name, input_html: { class: "tag-classic-input1" }, placeholder: "Sous le soleil de Nice" %>
+
+        <%= f.input :description, as: :text, input_html: { class: "tag-classic-input1" }, placeholder: "Join us for a delightful experience 'Sous le soleil de Nice' – a journey under the warm sun of Nice, France. This event promises a splendid day filled with sun-kissed adventures, scenic vistas, and the vibrant culture of the French Riviera. Explore the breathtaking Mediterranean coastline, savor exquisite cuisine, and immerse yourself in the charming ambiance of Nice. Whether it's a leisurely stroll along the Promenade des Anglais or a taste of the local delicacies, this event is your ticket to bask in the beauty and flavors of Nice's sunny paradise. Come and be part of an unforgettable day 'Sous le soleil de Nice'." %>
 
         <div class="input-group input-wrapper-new">
           <span class="input-group-addon-new"><i class="fa fa-map-marker where-show-new"></i></span>
-          <%= f.input :address, input_html: { class: "tag-classic-input1" }, placeholder: "Event address", label: false %>
+          <%= f.input :address,
+          input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
+          wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}},
+          placeholder: "Enter address",
+          label: false %>
         </div>
 
         <div class="input-group input-wrapper-new">
           <span class="input-group-addon-new"><i class="fa-regular fa-calendar when-show-new"></i></span>
-          <%= f.input :date, input_html: { class: "tag-classic-input1" }, label: false %>
+          <%= f.input :date, html5: true, input_html: { class: "tag-classic-input1" }, label: false %>
         </div>
 
         <div class="input-group input-wrapper-new">
@@ -41,12 +76,12 @@
                 action: "change->category#updateIcon",
                 "category-target": "input"
               }
-            },
+            }, include_blank: "Choose category",
             label: false
           %>
         </div>
 
-        <%= f.button :submit, "Create event", class: "center-text general-button" %>
+        <%= f.button :submit, "Add event", class: "center-text general-button" %>
 
       <% end %>
     </div>
