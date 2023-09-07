@@ -28,6 +28,16 @@
   position: absolute;
 }
 
+.file-label-new {
+  display: inline-block;
+  width: 100%;
+  height: 168px;
+  background-color: #f2f2f2;
+  // border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+}
+
 .file-label-event {
   display: flex;
   justify-content: center;
@@ -48,6 +58,13 @@
   height: 100%;
   border-radius: 50%;
 }
+
+#avatar_user_edit_new img {
+  object-fit: contain;
+  width: 100%;
+  height: 168px;
+}
+
 #avatar_user_edit .edit-btn {
   position: absolute;
   bottom: 20px;
