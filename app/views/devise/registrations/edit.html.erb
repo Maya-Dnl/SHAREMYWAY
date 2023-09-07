@@ -29,13 +29,10 @@
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
   </div>
-  <div class="tag-classic-input">
-    <%= f.input :current_password,
-                input_html: { class: "tag-classic-input1" },
-                hint: "We need your current password to confirm your changes, please",
-                required: true,
-                autocomplete: :current_password  %>
-  </div>
+
+
+
+
 
     <div class="file-container" data-controller="change-style-input">
         <%= f.input :photo, as: :file,
