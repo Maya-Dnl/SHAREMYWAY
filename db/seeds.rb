@@ -230,7 +230,7 @@ event9.save
 
 event10 = Event.create!(
   name: "Photography Workshop",
-  address: "(Paris, France",
+  address: "Paris, France",
   date: "29/09/2023",
   category: "Photography Workshops",
   description: "Capture iconic shots of Montmartre and the Eiffel Tower with a photography workshop led by a local expert in the heart of Paris. Learn the art of photography against the backdrop of Parisian landmarks, and take home stunning images to cherish.",

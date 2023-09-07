@@ -1,8 +1,3 @@
-<%# <h1 class="title-all-events">All Events</h1> %>
-  <%# <button class="event-maps"></button> %>
-  <%# <%= link_to "Maps", maps_path, class: "btn btn-primary" %>
-  <%# <button class="back"></button> %>
-
 <div class="image-event-show">
   <%= cl_image_tag(@event.photo.key, alt: "NA", class: "card-img-top img-show") %>
   <div class="image-event-gradiant"></div>
@@ -12,7 +7,6 @@
   <%= link_to events_path, class: "btn-back-all-events" do %>
     <i class="fa-solid fa-circle-chevron-left"></i>
   <% end %>
-
 
   <% if @event.user == current_user %>
     <div class="btn-delete-edit d-flex">
@@ -31,7 +25,6 @@
     <% end %>
 
   <% end %>
-
 
 
   <div class="category">
@@ -66,27 +59,30 @@
 
   <div class="show-infos">
     <h1 class="event-title spacy"><%= @event.name %></h1>
-    <div class="location-wrapper d-flex align-items-center spacy">
-      <i class="fa-solid fa-location-pin icon-info where-show"></i>
-      <div class="location size"><%= @event.address %></div>
-    </div>
-    <div class="date-wrapper d-flex align-items-center">
-      <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
-      <div class="display-date size"><%= @event.date %></div>
-    </div>
-    <div class="date-wrapper d-flex align-items-center">
-      <i class="fa-solid fa-user-group icon-info who-show spacy"></i>
-      <div class="count-members size"><%= @event.bookings.count %> members going</div>
-    </div>
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa fa-map-marker where-show-new"></i></span>
+        <div class="location size"><%= @event.address %></div>
+      </div>
+
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa-regular fa-calendar when-show-new"></i></span>
+        <div class="display-date size"><%= @event.date %></div>
+      </div>
+
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa-solid fa-user icon-info who-show-new spacy"></i></span>
+        <% if (@event.bookings.count) == 0 %>
+          <div class="count-members size">No members</div>
+        <% elsif (@event.bookings.count) == 1 %>
+          <div class="count-members size">One member</div>
+        <% else (@event.bookings.count) > 1 %>
+          <div class="count-members size"><%= @event.bookings.count %>members</div>
+        <% end %>
+      </div>
+
     <div class="description">
       <p class="infos-description"></p>
         <p class="text-description"> "<%= @event.description %>"</p>
     </div>
   </div>
 </div>
-
-<%# <% if flash[:notice].present? %>
-  <%# <div class="alert alert-success">
-    <%= flash[:notice] %>
-  <%# </div>
-<% end %>
