@@ -16,8 +16,8 @@
 
 .btn-back-all-events {
   position: absolute;
-  font-size: 22px;
-  bottom: 93%;
+  font-size: 27px;
+  bottom: 91%;
   left: 2%;
   color: $white;
   // position: relative;
@@ -27,11 +27,11 @@
 }
 
 .join-event-button {
-  font-size: 20px;
+  font-size: 23px;
   position: absolute;
   background-color: transparent;
-  bottom: 93%;
-  left: 84%;
+  bottom: 92%;
+  left: 80%;
   color: $white;
   // position: relative;
   border-radius: 50%;
@@ -83,15 +83,16 @@
 
 .event-title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .spacy {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .size {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 .where-show {
@@ -99,28 +100,37 @@
   background-color: $kakhi;
   font-style: normal;
   border-radius: 5px;
-  padding: 8px;
+  padding: 10px;
   margin-right: 5px;
 }
 
-.when-show {
-  color: $white;
-  background-color: $yellow;
-  font-style: normal;
-  border-radius: 5px;
-  padding: 7px;
-  margin-right: 5px;
+.display-date {
+margin-top: 5px;
 }
 
-.who-show {
+.count-members {
+  margin-bottom: 9px;
+}
+
+.who-show-new {
   color: $white;
   background-color: grey;
-  font-size: 13px;
   font-style: normal;
   border-radius: 5px;
-  padding: 6px;
-  margin-right: 5px;
+  padding: 8px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+// .who-show {
+
+//   border-radius: 5px;
+//   padding: 7px;
+//   margin-right: 5px;
+// }
 
 .description {
   margin-top: 15px;
@@ -131,7 +141,7 @@
   color: #5e5c5c;
   font-size: 16px;
   font-style: italic;
-  margin-top: 40px;
+  margin-top: 35px;
 }
 
 .where-show-new {
@@ -192,6 +202,10 @@
   display: flex;
   align-items: center;
   margin-right: 10px;
+}
+
+.location {
+  margin-top: 7px;
 }
 
 .event_address{

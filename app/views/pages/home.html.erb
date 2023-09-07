@@ -17,7 +17,7 @@
     <% if current_user %>
       <%= link_to "Get Started", events_path, class:"fw-bold" %>
     <% else %>
-      <%= link_to "Get Started", new_user_registration_path, class:"fw-bold" %>
+      <%= link_to "Get Started", edit_user_registration_path, class:"fw-bold" %>
     <% end %>
     </button>
 

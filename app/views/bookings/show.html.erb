@@ -13,24 +13,33 @@
     <i class="fa-solid fa-campground category"></i>
   </div>
 
-  <%= cl_image_tag(@booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-show-event") %>
+  <%= cl_image_tag( @booking.event.user.photo.key, alt: "NA", class: "card-trip-user avatar-show-event") %>
 
   <div class="show-infos">
     <h1 class="event-title spacy"><%= @booking.event.name %></h1>
-    <div class="location-wrapper d-flex align-items-center spacy">
-      <i class="fa-solid fa-location-pin icon-info where-show"></i>
-      <div class="location size"><%= @booking.event.address %></div>
-    </div>
-    <div class="date-wrapper d-flex align-items-center">
-      <i class="fa-regular fa-calendar icon-info when-show spacy"></i>
-      <div class="display-date size"><%= @booking.event.date %></div>
-    </div>
-    <div class="date-wrapper d-flex align-items-center">
-      <i class="fa-solid fa-user-group icon-info who-show spacy"></i>
-      <div class="count-members size"><%= @booking.event.bookings.count %> members going</div>
-    </div>
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa fa-map-marker where-show-new"></i></span>
+        <div class="location size"><%= @booking.event.address %></div>
+      </div>
+
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa-regular fa-calendar when-show-new"></i></span>
+        <div class="display-date size"><%= @booking.event.date %></div>
+      </div>
+
+      <div class="input-group input-wrapper-new">
+        <span class="input-group-addon-new"><i class="fa-solid fa-user icon-info who-show-new spacy"></i></span>
+        <% if (@booking.event.bookings.count) == 0 %>
+          <div class="count-members size">No members</div>
+        <% elsif (@booking.event.bookings.count) == 1 %>
+          <div class="count-members size">One member</div>
+        <% else (@booking.event.bookings.count) > 1 %>
+          <div class="count-members size"><%= @booking.event.bookings.count %>members</div>
+        <% end %>
+      </div>
+
     <div class="description">
-      <p class="infos-description">Description</p>
+      <p class="infos-description"></p>
         <p class="text-description"> "<%= @booking.event.description %>"</p>
     </div>
   </div>

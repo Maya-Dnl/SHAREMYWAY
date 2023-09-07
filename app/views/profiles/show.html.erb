@@ -11,10 +11,15 @@
   <div class="file-container mt-3 mb-4">
     <div class="file-label", id="avatar_user_edit",>
       <div class= "">
-        <%= cl_image_tag(current_user.photo.key) %>
-          <%= link_to edit_user_registration_path do %>
-            <i class="fa-regular fa-pen-to-square edit-btn"></i>
-          <% end %>
+        <% if current_user.photo.attached? == true %>
+          <%= cl_image_tag(current_user.photo.key)%>
+        <i class="fa-regular fa-pen-to-square edit-btn"></i>
+       <% else %>
+        <i class="fa-solid fa-camera profil-image"></i>
+      <% end %>
+      <%= link_to edit_user_registration_path do %>
+        <i class="fa-regular fa-pen-to-square edit-btn"></i>
+      <% end %>
       </div>
     </div>
   </div>
