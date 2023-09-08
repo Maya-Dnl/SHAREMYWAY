@@ -144,6 +144,7 @@ file = File.open("app/assets/images/guy-worldface-espagnol-dans-fond-blanc.jpg")
 user9.photo.attach(io: file, filename: "guy-worldface-espagnol-dans-fond-blanc.jpg", content_type: "image/jpg")
 user9.save
 
+
 event1 = Event.create!(
   name: "Mont Saint-Michel Guided Tour",
   address: "Mont-Saint-Michel, France",
