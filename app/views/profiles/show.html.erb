@@ -43,6 +43,7 @@
   </div>
 
   <div class="profil-page-new">
+    <% if current_user.hobby1 %>
      <% my_user_hobbies = [current_user.hobby1, current_user.hobby2, current_user.hobby3] %>
        <% my_user_hobbies.each do |hobbie| %>
         <div class="custom-radio-label-2">
@@ -52,5 +53,6 @@
              <span class="custom-radio-text"><%= hobbie %></span>
         </div>
       <% end %>
+    <% end %>
   </div>
 </div>
